@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A lightweight, verifiable Scripture reader." />
+    <title>Permanent Word</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="Reader header">
+      <div class="brand">Permanent Word</div>
+      <div class="verify-pill" id="verifyStatus">Checking text…</div>
+    </header>
+
+    <main class="reader-shell">
+      <button class="nav-button nav-left" id="prevButton" type="button" aria-label="Previous chapter">‹</button>
+
+      <article class="chapter" aria-labelledby="chapterTitle">
+        <p class="book-label" id="bookLabel">JOHN 1</p>
+        <h1 class="section-heading" id="chapterTitle">The Word Became Flesh</h1>
+        <div class="scripture-text" id="scriptureText"></div>
+
+        <section class="verification-panel" aria-label="Text verification information">
+          <h2>Text verification</h2>
+          <p id="verificationMessage"></p>
+          <dl>
+            <div>
+              <dt>Current SHA-256</dt>
+              <dd><code id="currentHash">—</code></dd>
+            </div>
+            <div>
+              <dt>Canonical SHA-256</dt>
+              <dd><code id="canonicalHash">Not set yet</code></dd>
+            </div>
+          </dl>
+        </section>
+      </article>
+
+      <button class="nav-button nav-right" id="nextButton" type="button" aria-label="Next chapter">›</button>
+    </main>
+
+    <nav class="mobile-nav" aria-label="Mobile chapter navigation">
+      <button id="mobilePrevButton" type="button">Previous</button>
+      <button id="mobileNextButton" type="button">Next</button>
+    </nav>
+
+    <script src="app.js"></script>
+  </body>
+</html>
