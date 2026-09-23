@@ -1,13 +1,12 @@
 // Permanent Word starter
 // No framework. No backend. No build step.
-// Text now lives in an external canonical JSON file.
+// Text files are loaded from a small manifest.
 
-const CHAPTER_PATH = "./data/john-1.json";
-const HASH_PATH = "./data/john-1.sha256.txt";
+const MANIFEST_PATH = "./data/manifest.json";
 
+let manifest = null;
 let currentChapterIndex = 0;
-let chapters = [];
-let rawChapterFiles = [];
+const chapterCache = new Map();
 
 const bookLabel = document.getElementById("bookLabel");
 const chapterTitle = document.getElementById("chapterTitle");
@@ -50,29 +49,61 @@ async function loadTextFile(path) {
   return response.text();
 }
 
-async function loadChapter() {
-  const rawChapter = await loadTextFile(CHAPTER_PATH);
-  const chapter = JSON.parse(rawChapter);
-
-  chapters = [chapter];
-  rawChapterFiles = [rawChapter];
+async function loadManifest() {
+  const rawManifest = await loadTextFile(MANIFEST_PATH);
+  manifest = JSON.parse(rawManifest);
 }
 
-async function loadCanonicalHash() {
+async function loadChapterByIndex(index) {
+  const chapterEntry = manifest.chapters[index];
+
+  if (chapterCache.has(chapterEntry.textPath)) {
+    return chapterCache.get(chapterEntry.textPath);
+  }
+
+  const rawChapter = await loadTextFile(chapterEntry.textPath);
+  const chapter = JSON.parse(rawChapter);
+
+  const chapterData = {
+    entry: chapterEntry,
+    raw: rawChapter,
+    parsed: chapter
+  };
+
+  chapterCache.set(chapterEntry.textPath, chapterData);
+
+  return chapterData;
+}
+
+async function loadCanonicalHash(hashPath) {
   try {
-    const hash = await loadTextFile(HASH_PATH);
+    const hash = await loadTextFile(hashPath);
     return hash.trim();
   } catch {
     return "";
   }
 }
 
-function renderChapter() {
-  const chapter = chapters[currentChapterIndex];
+function updateNavState() {
+  const atStart = currentChapterIndex === 0;
+  const atEnd = currentChapterIndex === manifest.chapters.length - 1;
 
-  document.title = `${chapter.book} ${chapter.chapter} | Permanent Word`;
+  [prevButton, mobilePrevButton].forEach((button) => {
+    button.disabled = atStart;
+  });
+
+  [nextButton, mobileNextButton].forEach((button) => {
+    button.disabled = atEnd;
+  });
+}
+
+async function renderCurrentChapter() {
+  const chapterData = await loadChapterByIndex(currentChapterIndex);
+  const chapter = chapterData.parsed;
+
+  document.title = `${chapter.book} ${chapter.chapter} | ${manifest.title}`;
   bookLabel.textContent = `${chapter.book} ${chapter.chapter}`.toUpperCase();
-  chapterTitle.textContent = chapter.heading;
+  chapterTitle.textContent = chapter.heading || "";
 
   scriptureText.innerHTML = chapter.verses
     .map((verse) => `
@@ -83,13 +114,13 @@ function renderChapter() {
     .join("");
 
   updateNavState();
+  await verifyCurrentChapter(chapterData);
 }
 
-async function verifyCurrentText() {
+async function verifyCurrentChapter(chapterData) {
   try {
-    const rawChapter = rawChapterFiles[currentChapterIndex];
-    const currentHash = await sha256(rawChapter);
-    const canonicalHash = await loadCanonicalHash();
+    const currentHash = await sha256(chapterData.raw);
+    const canonicalHash = await loadCanonicalHash(chapterData.entry.hashPath);
 
     currentHashEl.textContent = currentHash;
     canonicalHashEl.textContent = canonicalHash || "Not set yet";
@@ -100,7 +131,7 @@ async function verifyCurrentText() {
       verifyStatus.textContent = "Hash generated";
       verifyStatus.classList.add("is-warning");
       verificationMessage.textContent =
-        "Copy the current SHA-256 hash into data/john-1.sha256.txt to lock this chapter as canonical.";
+        `Copy the current SHA-256 hash into ${chapterData.entry.hashPath} to lock this chapter as canonical.`;
       return;
     }
 
@@ -119,52 +150,36 @@ async function verifyCurrentText() {
     verifyStatus.textContent = "Verification unavailable";
     verifyStatus.className = "verify-pill is-error";
     verificationMessage.textContent =
-      "The browser could not verify the chapter file. Make sure you are running this through localhost.";
+      "The browser could not verify this chapter file.";
     currentHashEl.textContent = "Unavailable";
   }
 }
 
-function updateNavState() {
-  const atStart = currentChapterIndex === 0;
-  const atEnd = currentChapterIndex === chapters.length - 1;
-
-  [prevButton, mobilePrevButton].forEach((button) => {
-    button.disabled = atStart;
-  });
-
-  [nextButton, mobileNextButton].forEach((button) => {
-    button.disabled = atEnd;
-  });
-}
-
-function goToPreviousChapter() {
+async function goToPreviousChapter() {
   if (currentChapterIndex > 0) {
     currentChapterIndex -= 1;
-    renderChapter();
-    verifyCurrentText();
+    await renderCurrentChapter();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }
 
-function goToNextChapter() {
-  if (currentChapterIndex < chapters.length - 1) {
+async function goToNextChapter() {
+  if (currentChapterIndex < manifest.chapters.length - 1) {
     currentChapterIndex += 1;
-    renderChapter();
-    verifyCurrentText();
+    await renderCurrentChapter();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
 }
 
 async function init() {
   try {
-    await loadChapter();
-    renderChapter();
-    await verifyCurrentText();
+    await loadManifest();
+    await renderCurrentChapter();
   } catch (error) {
     verifyStatus.textContent = "Could not load text";
     verifyStatus.className = "verify-pill is-error";
     verificationMessage.textContent =
-      "The chapter file could not be loaded. Run this through localhost and confirm data/john-1.json exists.";
+      "The manifest or chapter file could not be loaded. Confirm data/manifest.json exists and run through localhost.";
   }
 }
 

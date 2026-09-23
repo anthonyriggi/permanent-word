@@ -1,0 +1,18 @@
+{
+  "title": "Permanent Word",
+  "translation": "KJV",
+  "chapters": [
+    {
+      "book": "John",
+      "chapter": 1,
+      "textPath": "./data/john-1.json",
+      "hashPath": "./data/john-1.sha256.txt"
+    },
+    {
+      "book": "John",
+      "chapter": 2,
+      "textPath": "./data/john-2.json",
+      "hashPath": "./data/john-2.sha256.txt"
+    }
+  ]
+}
