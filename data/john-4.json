@@ -1,0 +1,50 @@
+{
+  "translation": "KJV",
+  "book": "John",
+  "chapter": 4,
+  "heading": "The Woman at the Well",
+  "verses": [
+    {
+      "number": 1,
+      "text": "When therefore the Lord knew how the Pharisees had heard that Jesus made and baptized more disciples than John,"
+    },
+    {
+      "number": 2,
+      "text": "Though Jesus himself baptized not, but his disciples,"
+    },
+    {
+      "number": 3,
+      "text": "He left Judaea, and departed again into Galilee."
+    },
+    {
+      "number": 4,
+      "text": "And he must needs go through Samaria."
+    },
+    {
+      "number": 5,
+      "text": "Then cometh he to a city of Samaria, which is called Sychar, near to the parcel of ground that Jacob gave to his son Joseph."
+    },
+    {
+      "number": 6,
+      "text": "Now Jacob's well was there. Jesus therefore, being wearied with his journey, sat thus on the well: and it was about the sixth hour."
+    },
+    {
+      "number": 7,
+      "text": "There cometh a woman of Samaria to draw water: Jesus saith unto her, Give me to drink.",
+      "wordsOfJesus": true
+    },
+    {
+      "number": 8,
+      "text": "For his disciples were gone away unto the city to buy meat."
+    },
+    {
+      "number": 9,
+      "text": "Then saith the woman of Samaria unto him, How is it that thou, being a Jew, askest drink of me, which am a woman of Samaria? for the Jews have no dealings with the Samaritans."
+    },
+    {
+      "number": 10,
+      "text": "Jesus answered and said unto her, If thou knewest the gift of God, and who it is that saith to thee, Give me to drink; thou wouldest have asked of him, and he would have given thee living water.",
+      "wordsOfJesus": true
+    }
+  ]
+}

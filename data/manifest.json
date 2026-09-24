@@ -1,24 +1,42 @@
 {
   "title": "Permanent Word",
   "translation": "KJV",
+  "generatedAt": "2026-09-24T22:27:58.063Z",
   "chapters": [
     {
       "book": "John",
       "chapter": 1,
       "textPath": "./data/john-1.json",
-      "hashPath": "./data/john-1.sha256.txt"
+      "hashPath": "./data/john-1.sha256.txt",
+      "sha256": "eea48efd1ad4ce4552c253d93bb7af72de74e4f063e1af1d382c6746572d4dac"
     },
     {
       "book": "John",
       "chapter": 2,
       "textPath": "./data/john-2.json",
-      "hashPath": "./data/john-2.sha256.txt"
+      "hashPath": "./data/john-2.sha256.txt",
+      "sha256": "62b2cd620523f064ce57edb21adacd5bde7ef853a1159c884797f897863f99fa"
     },
     {
       "book": "John",
       "chapter": 3,
       "textPath": "./data/john-3.json",
-      "hashPath": "./data/john-3.sha256.txt"
+      "hashPath": "./data/john-3.sha256.txt",
+      "sha256": "ad11f8e51aa2020f872ba47ab1a85af14bb7c06628c2eaa66ed320f47e0365de"
+    },
+    {
+      "book": "John",
+      "chapter": 4,
+      "textPath": "./data/john-4.json",
+      "hashPath": "./data/john-4.sha256.txt",
+      "sha256": "6cecdfed11b2992cdc9aa41a53120fec4979c41069ee5e7b35c1e251809c4634"
+    },
+    {
+      "book": "John",
+      "chapter": 5,
+      "textPath": "./data/john-5.json",
+      "hashPath": "./data/john-5.sha256.txt",
+      "sha256": "20f70259cb70a27cda058e2e15859cccbda7d2f090697d78e5a373200b186620"
     }
   ]
 }
