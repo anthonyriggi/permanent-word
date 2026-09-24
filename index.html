@@ -7,6 +7,7 @@
     <title>Permanent Word</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
+
   <body>
     <header class="site-header" aria-label="Reader header">
       <div class="brand">Permanent Word</div>
@@ -18,17 +19,26 @@
 
       <article class="chapter" aria-labelledby="chapterTitle">
         <p class="book-label" id="bookLabel">JOHN 1</p>
+
+        <div class="chapter-select-wrap">
+          <label class="chapter-select-label" for="chapterSelect">Chapter</label>
+          <select id="chapterSelect" class="chapter-select"></select>
+        </div>
+
         <h1 class="section-heading" id="chapterTitle">The Word Became Flesh</h1>
+
         <div class="scripture-text" id="scriptureText"></div>
 
         <section class="verification-panel" aria-label="Text verification information">
           <h2>Text verification</h2>
           <p id="verificationMessage"></p>
+
           <dl>
             <div>
               <dt>Current SHA-256</dt>
               <dd><code id="currentHash">—</code></dd>
             </div>
+
             <div>
               <dt>Canonical SHA-256</dt>
               <dd><code id="canonicalHash">Not set yet</code></dd>
@@ -45,6 +55,6 @@
       <button id="mobileNextButton" type="button">Next</button>
     </nav>
 
-    <script src="./app.js?v=4"></script>
+    <script src="./app.js?v=5"></script>
   </body>
 </html>

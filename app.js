@@ -1,6 +1,6 @@
-// Permanent Word starter
+// Permanent Word
 // No framework. No backend. No build step.
-// Text files are loaded from a small manifest.
+// Chapters are loaded from data/manifest.json.
 
 const MANIFEST_PATH = "./data/manifest.json";
 
@@ -20,6 +20,7 @@ const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
 const mobilePrevButton = document.getElementById("mobilePrevButton");
 const mobileNextButton = document.getElementById("mobileNextButton");
+const chapterSelect = document.getElementById("chapterSelect");
 
 function escapeHtml(value) {
   return String(value)
@@ -84,6 +85,18 @@ async function loadCanonicalHash(hashPath) {
   }
 }
 
+function populateChapterSelect() {
+  chapterSelect.innerHTML = manifest.chapters
+    .map((chapterEntry, index) => {
+      return `
+        <option value="${index}">
+          ${escapeHtml(chapterEntry.book)} ${chapterEntry.chapter}
+        </option>
+      `;
+    })
+    .join("");
+}
+
 function updateNavState() {
   const atStart = currentChapterIndex === 0;
   const atEnd = currentChapterIndex === manifest.chapters.length - 1;
@@ -103,14 +116,19 @@ async function renderCurrentChapter() {
 
   document.title = `${chapter.book} ${chapter.chapter} | ${manifest.title}`;
   bookLabel.textContent = `${chapter.book} ${chapter.chapter}`.toUpperCase();
+  chapterSelect.value = String(currentChapterIndex);
   chapterTitle.textContent = chapter.heading || "";
 
   scriptureText.innerHTML = chapter.verses
-    .map((verse) => `
-      <p class="verse">
-        <sup class="verse-number">${verse.number}</sup>${escapeHtml(verse.text)}
-      </p>
-    `)
+    .map((verse) => {
+      const verseClass = verse.wordsOfJesus ? "verse red-letter" : "verse";
+
+      return `
+        <p class="${verseClass}">
+          <sup class="verse-number">${verse.number}</sup>${escapeHtml(verse.text)}
+        </p>
+      `;
+    })
     .join("");
 
   updateNavState();
@@ -152,6 +170,7 @@ async function verifyCurrentChapter(chapterData) {
     verificationMessage.textContent =
       "The browser could not verify this chapter file.";
     currentHashEl.textContent = "Unavailable";
+    canonicalHashEl.textContent = "Unavailable";
   }
 }
 
@@ -174,12 +193,15 @@ async function goToNextChapter() {
 async function init() {
   try {
     await loadManifest();
+    populateChapterSelect();
     await renderCurrentChapter();
   } catch (error) {
     verifyStatus.textContent = "Could not load text";
     verifyStatus.className = "verify-pill is-error";
     verificationMessage.textContent =
       "The manifest or chapter file could not be loaded. Confirm data/manifest.json exists and run through localhost.";
+    currentHashEl.textContent = "Unavailable";
+    canonicalHashEl.textContent = "Unavailable";
   }
 }
 
@@ -187,6 +209,12 @@ prevButton.addEventListener("click", goToPreviousChapter);
 nextButton.addEventListener("click", goToNextChapter);
 mobilePrevButton.addEventListener("click", goToPreviousChapter);
 mobileNextButton.addEventListener("click", goToNextChapter);
+
+chapterSelect.addEventListener("change", async (event) => {
+  currentChapterIndex = Number(event.target.value);
+  await renderCurrentChapter();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "ArrowLeft") goToPreviousChapter();

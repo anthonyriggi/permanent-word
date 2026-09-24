@@ -13,6 +13,12 @@
       "chapter": 2,
       "textPath": "./data/john-2.json",
       "hashPath": "./data/john-2.sha256.txt"
+    },
+    {
+      "book": "John",
+      "chapter": 3,
+      "textPath": "./data/john-3.json",
+      "hashPath": "./data/john-3.sha256.txt"
     }
   ]
 }
