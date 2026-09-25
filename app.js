@@ -34,6 +34,7 @@ const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
 const mobilePrevButton = document.getElementById("mobilePrevButton");
 const mobileNextButton = document.getElementById("mobileNextButton");
+const bookSelect = document.getElementById("bookSelect");
 const chapterSelect = document.getElementById("chapterSelect");
 
 function escapeHtml(value) {
@@ -64,6 +65,27 @@ function findChapterIndexBySlug(slug) {
   return manifest.chapters.findIndex((chapterEntry) => {
     return chapterEntryToSlug(chapterEntry) === slug;
   });
+}
+
+function getBooks() {
+  const books = [];
+
+  for (const chapterEntry of manifest.chapters) {
+    if (!books.includes(chapterEntry.book)) {
+      books.push(chapterEntry.book);
+    }
+  }
+
+  return books;
+}
+
+function getChapterOptionsForBook(book) {
+  return manifest.chapters
+    .map((chapterEntry, index) => ({
+      index,
+      chapterEntry
+    }))
+    .filter((item) => item.chapterEntry.book === book);
 }
 
 function updateUrlForCurrentChapter(mode = "push") {
@@ -148,16 +170,32 @@ async function loadCanonicalHash(hashPath) {
   }
 }
 
-function populateChapterSelect() {
-  chapterSelect.innerHTML = manifest.chapters
-    .map((chapterEntry, index) => {
+function populateBookSelect() {
+  bookSelect.innerHTML = getBooks()
+    .map((book) => {
+      return `<option value="${escapeHtml(book)}">${escapeHtml(book)}</option>`;
+    })
+    .join("");
+}
+
+function populateChapterSelectForBook(book) {
+  chapterSelect.innerHTML = getChapterOptionsForBook(book)
+    .map((item) => {
       return `
-        <option value="${index}">
-          ${escapeHtml(chapterEntry.book)} ${chapterEntry.chapter}
+        <option value="${item.index}">
+          ${item.chapterEntry.chapter}
         </option>
       `;
     })
     .join("");
+}
+
+function updateSelectors() {
+  const currentEntry = manifest.chapters[currentChapterIndex];
+
+  bookSelect.value = currentEntry.book;
+  populateChapterSelectForBook(currentEntry.book);
+  chapterSelect.value = String(currentChapterIndex);
 }
 
 function setInitialChapterFromUrl() {
@@ -207,7 +245,8 @@ async function renderCurrentChapter() {
 
   document.title = `${chapter.book} ${chapter.chapter} | ${manifest.title}`;
   bookLabel.textContent = `${chapter.book} ${chapter.chapter}`.toUpperCase();
-  chapterSelect.value = String(currentChapterIndex);
+
+  updateSelectors();
 
   chapterTitle.textContent = chapter.heading || "";
   chapterTitle.hidden = !chapter.heading;
@@ -314,7 +353,7 @@ async function init() {
   try {
     await loadManifest();
     await verifyManifest();
-    populateChapterSelect();
+    populateBookSelect();
     setInitialChapterFromUrl();
     renderSourceInfo();
     await renderCurrentChapter();
@@ -332,6 +371,15 @@ prevButton.addEventListener("click", goToPreviousChapter);
 nextButton.addEventListener("click", goToNextChapter);
 mobilePrevButton.addEventListener("click", goToPreviousChapter);
 mobileNextButton.addEventListener("click", goToNextChapter);
+
+bookSelect.addEventListener("change", async (event) => {
+  const selectedBook = event.target.value;
+  const firstChapterInBook = getChapterOptionsForBook(selectedBook)[0];
+
+  if (firstChapterInBook) {
+    await goToChapterIndex(firstChapterInBook.index);
+  }
+});
 
 chapterSelect.addEventListener("change", async (event) => {
   await goToChapterIndex(Number(event.target.value));

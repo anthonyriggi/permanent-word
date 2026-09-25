@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="A lightweight, verifiable Scripture reader." />
     <title>Permanent Word</title>
-    <link rel="stylesheet" href="./styles.css?v=2" />
+    <link rel="stylesheet" href="./styles.css?v=3" />
   </head>
 
   <body>
@@ -18,11 +18,18 @@
       <button class="nav-button nav-left" id="prevButton" type="button" aria-label="Previous chapter">‹</button>
 
       <article class="chapter" aria-labelledby="chapterTitle">
-        <p class="book-label" id="bookLabel">JOHN 1</p>
+        <p class="book-label" id="bookLabel">MATTHEW 1</p>
 
-        <div class="chapter-select-wrap">
-          <label class="chapter-select-label" for="chapterSelect">Chapter</label>
-          <select id="chapterSelect" class="chapter-select"></select>
+        <div class="reader-controls" aria-label="Scripture navigation">
+          <div class="reader-control">
+            <label class="reader-select-label" for="bookSelect">Book</label>
+            <select id="bookSelect" class="reader-select book-select"></select>
+          </div>
+
+          <div class="reader-control">
+            <label class="reader-select-label" for="chapterSelect">Chapter</label>
+            <select id="chapterSelect" class="reader-select chapter-select"></select>
+          </div>
         </div>
 
         <h1 class="section-heading" id="chapterTitle">The Word Became Flesh</h1>
@@ -89,6 +96,6 @@
       <button id="mobileNextButton" type="button">Next</button>
     </nav>
 
-    <script src="./app.js?v=9"></script>
+    <script src="./app.js?v=10"></script>
   </body>
 </html>
