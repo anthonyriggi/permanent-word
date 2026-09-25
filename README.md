@@ -1,38 +1,39 @@
-# Permanent Word Starter
+# Permanent Word
 
-A very small, static, no-framework Scripture reader/verifier.
+A lightweight, static Scripture reader with local text integrity verification.
 
-## Files
+The goal is to keep this project simple, readable, and self-maintainable:
 
-- `index.html` — page structure
-- `styles.css` — responsive reader styling
-- `app.js` — starter chapter data, navigation, SHA-256 verification
+- no framework
+- no backend
+- no database
+- no build step for the reader
+- no dependencies
+- static files only
 
-## How to run
+The reader loads Scripture data from JSON files, computes SHA-256 hashes in the browser, and verifies that the loaded text matches the canonical hash.
 
-Open `index.html` in a browser for the basic reader.
-
-For the hash verification, use a local server if your browser blocks Web Crypto on local files:
-
-```bash
-cd permanent-word-starter
-python3 -m http.server 5500
-```
-
-Then open:
+## Project structure
 
 ```text
-http://localhost:5500
-```
+permanent-word/
+  index.html
+  styles.css
+  app.js
+  package.json
 
-## How to make the text canonical
+  source/
+    john-sample.json
 
-1. Open the page.
-2. Copy the generated `Current SHA-256` value.
-3. Paste it into `CANONICAL_HASH` in `app.js`.
-4. Refresh the page.
-5. Change one word in the chapter text and refresh again. Verification should fail.
+  data/
+    manifest.json
+    manifest.sha256.txt
+    john-1.json
+    john-1.sha256.txt
+    john-2.json
+    john-2.sha256.txt
+    ...
 
-## Philosophy
-
-No framework. No backend. No database. No build step. The whole folder can be uploaded to IPFS or Arweave later.
+  scripts/
+    build-data.js
+    check-data.js
