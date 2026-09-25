@@ -7,8 +7,10 @@
   "scripts": {
     "start": "python3 -m http.server 5500",
     "serve": "python3 -m http.server 5500",
+    "source:download": "node scripts/download-source.js",
+    "source:check": "node scripts/check-source.js",
     "build:data": "node scripts/build-data.js",
     "check:data": "node scripts/check-data.js",
-    "verify": "npm run build:data && npm run check:data"
+    "verify": "npm run source:check && npm run build:data && npm run check:data"
   }
 }
