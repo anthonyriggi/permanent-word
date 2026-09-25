@@ -45,6 +45,44 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
+function chapterEntryToSlug(chapterEntry) {
+  return `${chapterEntry.book}-${chapterEntry.chapter}`
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function getHashSlug() {
+  return window.location.hash.replace("#", "").trim().toLowerCase();
+}
+
+function findChapterIndexBySlug(slug) {
+  if (!slug || !manifest) {
+    return -1;
+  }
+
+  return manifest.chapters.findIndex((chapterEntry) => {
+    return chapterEntryToSlug(chapterEntry) === slug;
+  });
+}
+
+function updateUrlForCurrentChapter(mode = "push") {
+  const chapterEntry = manifest.chapters[currentChapterIndex];
+  const slug = chapterEntryToSlug(chapterEntry);
+  const newUrl = `${window.location.pathname}${window.location.search}#${slug}`;
+
+  if (window.location.hash === `#${slug}`) {
+    return;
+  }
+
+  if (mode === "replace") {
+    window.history.replaceState(null, "", newUrl);
+    return;
+  }
+
+  window.history.pushState(null, "", newUrl);
+}
+
 async function sha256(value) {
   const bytes = new TextEncoder().encode(value);
   const buffer = await crypto.subtle.digest("SHA-256", bytes);
@@ -120,6 +158,19 @@ function populateChapterSelect() {
       `;
     })
     .join("");
+}
+
+function setInitialChapterFromUrl() {
+  const slug = getHashSlug();
+  const chapterIndex = findChapterIndexBySlug(slug);
+
+  if (chapterIndex >= 0) {
+    currentChapterIndex = chapterIndex;
+    return;
+  }
+
+  currentChapterIndex = 0;
+  updateUrlForCurrentChapter("replace");
 }
 
 function renderSourceInfo() {
@@ -224,6 +275,7 @@ async function verifyCurrentChapter(chapterData) {
 async function goToPreviousChapter() {
   if (currentChapterIndex > 0) {
     currentChapterIndex -= 1;
+    updateUrlForCurrentChapter();
     await renderCurrentChapter();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
@@ -232,9 +284,25 @@ async function goToPreviousChapter() {
 async function goToNextChapter() {
   if (currentChapterIndex < manifest.chapters.length - 1) {
     currentChapterIndex += 1;
+    updateUrlForCurrentChapter();
     await renderCurrentChapter();
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
+}
+
+async function goToChapterIndex(index, shouldUpdateUrl = true) {
+  if (index < 0 || index >= manifest.chapters.length) {
+    return;
+  }
+
+  currentChapterIndex = index;
+
+  if (shouldUpdateUrl) {
+    updateUrlForCurrentChapter();
+  }
+
+  await renderCurrentChapter();
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 async function init() {
@@ -242,6 +310,7 @@ async function init() {
     await loadManifest();
     await verifyManifest();
     populateChapterSelect();
+    setInitialChapterFromUrl();
     renderSourceInfo();
     await renderCurrentChapter();
   } catch (error) {
@@ -260,9 +329,19 @@ mobilePrevButton.addEventListener("click", goToPreviousChapter);
 mobileNextButton.addEventListener("click", goToNextChapter);
 
 chapterSelect.addEventListener("change", async (event) => {
-  currentChapterIndex = Number(event.target.value);
-  await renderCurrentChapter();
-  window.scrollTo({ top: 0, behavior: "smooth" });
+  await goToChapterIndex(Number(event.target.value));
+});
+
+window.addEventListener("hashchange", async () => {
+  if (!manifest) {
+    return;
+  }
+
+  const chapterIndex = findChapterIndexBySlug(getHashSlug());
+
+  if (chapterIndex >= 0 && chapterIndex !== currentChapterIndex) {
+    await goToChapterIndex(chapterIndex, false);
+  }
 });
 
 document.addEventListener("keydown", (event) => {
