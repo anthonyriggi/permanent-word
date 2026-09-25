@@ -33,7 +33,6 @@ function build() {
   const manifest = {
     title: source.title,
     translation: source.translation,
-    generatedAt: new Date().toISOString(),
     chapters: []
   };
 

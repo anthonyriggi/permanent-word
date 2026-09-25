@@ -3,8 +3,16 @@
 // Chapters are loaded from data/manifest.json.
 
 const MANIFEST_PATH = "./data/manifest.json";
+const MANIFEST_HASH_PATH = "./data/manifest.sha256.txt";
 
 let manifest = null;
+let rawManifest = "";
+let manifestVerification = {
+  currentHash: "",
+  canonicalHash: "",
+  verified: false
+};
+
 let currentChapterIndex = 0;
 const chapterCache = new Map();
 
@@ -51,8 +59,19 @@ async function loadTextFile(path) {
 }
 
 async function loadManifest() {
-  const rawManifest = await loadTextFile(MANIFEST_PATH);
+  rawManifest = await loadTextFile(MANIFEST_PATH);
   manifest = JSON.parse(rawManifest);
+}
+
+async function verifyManifest() {
+  const currentHash = await sha256(rawManifest);
+  const canonicalHash = (await loadTextFile(MANIFEST_HASH_PATH)).trim();
+
+  manifestVerification = {
+    currentHash,
+    canonicalHash,
+    verified: currentHash === canonicalHash
+  };
 }
 
 async function loadChapterByIndex(index) {
@@ -138,12 +157,22 @@ async function renderCurrentChapter() {
 async function verifyCurrentChapter(chapterData) {
   try {
     const currentHash = await sha256(chapterData.raw);
-    const canonicalHash = await loadCanonicalHash(chapterData.entry.hashPath);
+    const fileCanonicalHash = await loadCanonicalHash(chapterData.entry.hashPath);
+    const manifestCanonicalHash = chapterData.entry.sha256 || "";
+    const canonicalHash = manifestCanonicalHash || fileCanonicalHash;
 
     currentHashEl.textContent = currentHash;
     canonicalHashEl.textContent = canonicalHash || "Not set yet";
 
     verifyStatus.className = "verify-pill";
+
+    if (!manifestVerification.verified) {
+      verifyStatus.textContent = "Manifest changed";
+      verifyStatus.classList.add("is-error");
+      verificationMessage.textContent =
+        "The chapter list manifest does not match its canonical SHA-256 hash. Run the generator or check data/manifest.json.";
+      return;
+    }
 
     if (!canonicalHash) {
       verifyStatus.textContent = "Hash generated";
@@ -157,7 +186,7 @@ async function verifyCurrentChapter(chapterData) {
       verifyStatus.textContent = "Verified unchanged text";
       verifyStatus.classList.add("is-verified");
       verificationMessage.textContent =
-        "The loaded chapter file matches the canonical SHA-256 hash.";
+        `Chapter verified. Manifest verified. Collection chapters: ${manifest.chapters.length}.`;
     } else {
       verifyStatus.textContent = "Text does not match";
       verifyStatus.classList.add("is-error");
@@ -193,13 +222,14 @@ async function goToNextChapter() {
 async function init() {
   try {
     await loadManifest();
+    await verifyManifest();
     populateChapterSelect();
     await renderCurrentChapter();
   } catch (error) {
     verifyStatus.textContent = "Could not load text";
     verifyStatus.className = "verify-pill is-error";
     verificationMessage.textContent =
-      "The manifest or chapter file could not be loaded. Confirm data/manifest.json exists and run through localhost.";
+      "The manifest, manifest hash, or chapter file could not be loaded. Confirm data/manifest.json and data/manifest.sha256.txt exist.";
     currentHashEl.textContent = "Unavailable";
     canonicalHashEl.textContent = "Unavailable";
   }
