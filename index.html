@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="A lightweight, verifiable Scripture reader." />
     <title>Permanent Word</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css?v=2" />
   </head>
 
   <body>
@@ -29,7 +29,7 @@
 
         <div class="scripture-text" id="scriptureText"></div>
 
-        <section class="verification-panel" aria-label="Text verification information">
+        <section class="info-panel verification-panel" aria-label="Text verification information">
           <h2>Text verification</h2>
           <p id="verificationMessage"></p>
 
@@ -45,6 +45,40 @@
             </div>
           </dl>
         </section>
+
+        <section class="source-card" aria-label="Source information">
+          <div class="source-card-header">
+            <p class="source-kicker">Source information</p>
+            <p class="source-summary">This collection is generated from a tracked public-domain source file.</p>
+          </div>
+
+          <dl class="source-grid">
+            <div class="source-item">
+              <dt>Translation</dt>
+              <dd id="sourceTranslation">—</dd>
+            </div>
+
+            <div class="source-item">
+              <dt>Provider</dt>
+              <dd id="sourceProvider">—</dd>
+            </div>
+
+            <div class="source-item">
+              <dt>Imported book</dt>
+              <dd id="sourceImportedBook">—</dd>
+            </div>
+
+            <div class="source-item">
+              <dt>Chapters</dt>
+              <dd id="sourceChapterCount">—</dd>
+            </div>
+
+            <div class="source-item source-file-item">
+              <dt>Source file</dt>
+              <dd><code id="sourceFile">—</code></dd>
+            </div>
+          </dl>
+        </section>
       </article>
 
       <button class="nav-button nav-right" id="nextButton" type="button" aria-label="Next chapter">›</button>
@@ -55,6 +89,6 @@
       <button id="mobileNextButton" type="button">Next</button>
     </nav>
 
-    <script src="./app.js?v=9"></script>
+    <script src="./app.js?v=1"></script>
   </body>
 </html>

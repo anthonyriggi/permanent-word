@@ -24,6 +24,12 @@ const verificationMessage = document.getElementById("verificationMessage");
 const currentHashEl = document.getElementById("currentHash");
 const canonicalHashEl = document.getElementById("canonicalHash");
 
+const sourceTranslation = document.getElementById("sourceTranslation");
+const sourceProvider = document.getElementById("sourceProvider");
+const sourceImportedBook = document.getElementById("sourceImportedBook");
+const sourceFile = document.getElementById("sourceFile");
+const sourceChapterCount = document.getElementById("sourceChapterCount");
+
 const prevButton = document.getElementById("prevButton");
 const nextButton = document.getElementById("nextButton");
 const mobilePrevButton = document.getElementById("mobilePrevButton");
@@ -114,6 +120,16 @@ function populateChapterSelect() {
       `;
     })
     .join("");
+}
+
+function renderSourceInfo() {
+  const source = manifest.source || {};
+
+  sourceTranslation.textContent = manifest.translation || "Unknown";
+  sourceProvider.textContent = source.provider || "Unknown";
+  sourceImportedBook.textContent = source.importedBook || "Unknown";
+  sourceFile.textContent = source.sourceFile || "Unknown";
+  sourceChapterCount.textContent = String(manifest.chapters.length);
 }
 
 function updateNavState() {
@@ -226,6 +242,7 @@ async function init() {
     await loadManifest();
     await verifyManifest();
     populateChapterSelect();
+    renderSourceInfo();
     await renderCurrentChapter();
   } catch (error) {
     verifyStatus.textContent = "Could not load text";
