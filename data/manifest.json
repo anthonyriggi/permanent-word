@@ -624,17 +624,1237 @@
       "textPath": "./data/john-21.json",
       "hashPath": "./data/john-21.sha256.txt",
       "sha256": "21f69cbd1f2b8dfa7cb5d7b4137a4241cdee3acf147fa41b7841f7bf008e2b00"
+    },
+    {
+      "book": "Acts",
+      "chapter": 1,
+      "textPath": "./data/acts-1.json",
+      "hashPath": "./data/acts-1.sha256.txt",
+      "sha256": "0e6e36ec051e187285d09bee596c33739c4ec1cf7257f7c8311d765a80810b0a"
+    },
+    {
+      "book": "Acts",
+      "chapter": 2,
+      "textPath": "./data/acts-2.json",
+      "hashPath": "./data/acts-2.sha256.txt",
+      "sha256": "43c07a704a9dbe114becdf58f81b6f3ee0f15ebdc0059bf095e06bc5b8004469"
+    },
+    {
+      "book": "Acts",
+      "chapter": 3,
+      "textPath": "./data/acts-3.json",
+      "hashPath": "./data/acts-3.sha256.txt",
+      "sha256": "92e587e653fdca90971fe208a589819c7f73129d733c0f65b4887b600d301566"
+    },
+    {
+      "book": "Acts",
+      "chapter": 4,
+      "textPath": "./data/acts-4.json",
+      "hashPath": "./data/acts-4.sha256.txt",
+      "sha256": "1b753da365ec9f342d5cca1744f2948a8614098fbbf5cdc6576900059819fe72"
+    },
+    {
+      "book": "Acts",
+      "chapter": 5,
+      "textPath": "./data/acts-5.json",
+      "hashPath": "./data/acts-5.sha256.txt",
+      "sha256": "6f7a04eb65279365f381432ac74e4eaa5c1c43523b1a025859561364d145917b"
+    },
+    {
+      "book": "Acts",
+      "chapter": 6,
+      "textPath": "./data/acts-6.json",
+      "hashPath": "./data/acts-6.sha256.txt",
+      "sha256": "6508c021be3cdc4379a1d16303f364c37de28ccc938d10391aed68b18cf991ca"
+    },
+    {
+      "book": "Acts",
+      "chapter": 7,
+      "textPath": "./data/acts-7.json",
+      "hashPath": "./data/acts-7.sha256.txt",
+      "sha256": "2f293c8e93eb19705ab18cc28cfa1deb0b2e36ff735c93945b8c65d5dea9f5cf"
+    },
+    {
+      "book": "Acts",
+      "chapter": 8,
+      "textPath": "./data/acts-8.json",
+      "hashPath": "./data/acts-8.sha256.txt",
+      "sha256": "edff187452c32f00c8e9d33435eaad723fe60e14a059c7b587b94ffa6244e719"
+    },
+    {
+      "book": "Acts",
+      "chapter": 9,
+      "textPath": "./data/acts-9.json",
+      "hashPath": "./data/acts-9.sha256.txt",
+      "sha256": "e7c7bbc323863b804801ebc15f80850032d7406a50999743188a90cbcc30ee1c"
+    },
+    {
+      "book": "Acts",
+      "chapter": 10,
+      "textPath": "./data/acts-10.json",
+      "hashPath": "./data/acts-10.sha256.txt",
+      "sha256": "692e508b5564af220c3008f3d20672037eef01ee3208d8f88b90c22ea9a52ead"
+    },
+    {
+      "book": "Acts",
+      "chapter": 11,
+      "textPath": "./data/acts-11.json",
+      "hashPath": "./data/acts-11.sha256.txt",
+      "sha256": "18be4932846906fa80c42313a23cea32a6f4b8dcc23e05769673965e028f9601"
+    },
+    {
+      "book": "Acts",
+      "chapter": 12,
+      "textPath": "./data/acts-12.json",
+      "hashPath": "./data/acts-12.sha256.txt",
+      "sha256": "bd3b9957c04f72951a0f5249d1aac56a46abec6ac484029994920c0274ccbca9"
+    },
+    {
+      "book": "Acts",
+      "chapter": 13,
+      "textPath": "./data/acts-13.json",
+      "hashPath": "./data/acts-13.sha256.txt",
+      "sha256": "1043e35032bae7b89ef4bde7e36ec35174f8f52cace8e9e2e75a45ea8c1a4266"
+    },
+    {
+      "book": "Acts",
+      "chapter": 14,
+      "textPath": "./data/acts-14.json",
+      "hashPath": "./data/acts-14.sha256.txt",
+      "sha256": "34cef9c7710a7b4b90bfa5a4cd8c784ef0afe9ddf552db6b18b08db952947f49"
+    },
+    {
+      "book": "Acts",
+      "chapter": 15,
+      "textPath": "./data/acts-15.json",
+      "hashPath": "./data/acts-15.sha256.txt",
+      "sha256": "64ff252cd139e435349ef20bc037d5b523069ad028b6c6911ffeefe777d72e10"
+    },
+    {
+      "book": "Acts",
+      "chapter": 16,
+      "textPath": "./data/acts-16.json",
+      "hashPath": "./data/acts-16.sha256.txt",
+      "sha256": "9946d57f4eae147ae4a7c034ae5b82dd8455700fb310cf467a2ee105488c643e"
+    },
+    {
+      "book": "Acts",
+      "chapter": 17,
+      "textPath": "./data/acts-17.json",
+      "hashPath": "./data/acts-17.sha256.txt",
+      "sha256": "a6052e3b56e8a17aa921b11a0f24f74315776322b2f305be33f177f75eaa2c1a"
+    },
+    {
+      "book": "Acts",
+      "chapter": 18,
+      "textPath": "./data/acts-18.json",
+      "hashPath": "./data/acts-18.sha256.txt",
+      "sha256": "3f946109d119885d835e59d08dee551aac9541390fcb6cd4f533f054c98ccef8"
+    },
+    {
+      "book": "Acts",
+      "chapter": 19,
+      "textPath": "./data/acts-19.json",
+      "hashPath": "./data/acts-19.sha256.txt",
+      "sha256": "b016e37dab6f231bfb875c0f7abcf8ab93bc267d9181c9606abd99e243df5ee8"
+    },
+    {
+      "book": "Acts",
+      "chapter": 20,
+      "textPath": "./data/acts-20.json",
+      "hashPath": "./data/acts-20.sha256.txt",
+      "sha256": "68154d345fd7193eb825a748c5152363ef368d93a2a3e003bc4d4184510d97ac"
+    },
+    {
+      "book": "Acts",
+      "chapter": 21,
+      "textPath": "./data/acts-21.json",
+      "hashPath": "./data/acts-21.sha256.txt",
+      "sha256": "99686a0541cbc27c6ac4cfa76a191a57fade9f058e7122702339737378b5ec00"
+    },
+    {
+      "book": "Acts",
+      "chapter": 22,
+      "textPath": "./data/acts-22.json",
+      "hashPath": "./data/acts-22.sha256.txt",
+      "sha256": "e767eb7727d0b1b3a7dabe3261230d156899ebd52021b70b956f3995e5b99568"
+    },
+    {
+      "book": "Acts",
+      "chapter": 23,
+      "textPath": "./data/acts-23.json",
+      "hashPath": "./data/acts-23.sha256.txt",
+      "sha256": "3188be2b4523e6ba201756dbafa3dafb1d1c1ac95cd57576e06d33c8d17b0868"
+    },
+    {
+      "book": "Acts",
+      "chapter": 24,
+      "textPath": "./data/acts-24.json",
+      "hashPath": "./data/acts-24.sha256.txt",
+      "sha256": "d1421b7d9d5ce21e737f029162329827ff623ecbbb441a0e8c02a70b0e35d378"
+    },
+    {
+      "book": "Acts",
+      "chapter": 25,
+      "textPath": "./data/acts-25.json",
+      "hashPath": "./data/acts-25.sha256.txt",
+      "sha256": "c6a123c7f7d1920369f401e922d267434e3897a72361f9455951f8adeb74e1bf"
+    },
+    {
+      "book": "Acts",
+      "chapter": 26,
+      "textPath": "./data/acts-26.json",
+      "hashPath": "./data/acts-26.sha256.txt",
+      "sha256": "d9fbea661cbb908c56369c2947271efea5d91ff2415066ccf9a8b3812fa68cad"
+    },
+    {
+      "book": "Acts",
+      "chapter": 27,
+      "textPath": "./data/acts-27.json",
+      "hashPath": "./data/acts-27.sha256.txt",
+      "sha256": "767274b68cf08151f181f96eac0882d2af091c778a6a709f689ec1d1b2d25c8c"
+    },
+    {
+      "book": "Acts",
+      "chapter": 28,
+      "textPath": "./data/acts-28.json",
+      "hashPath": "./data/acts-28.sha256.txt",
+      "sha256": "c787faf904c2ccfa46942331df9d6b42c2a75f021ca2c01154f55ad9c89ad3ac"
+    },
+    {
+      "book": "Romans",
+      "chapter": 1,
+      "textPath": "./data/romans-1.json",
+      "hashPath": "./data/romans-1.sha256.txt",
+      "sha256": "71e12ed7f94334cf472a02e56a798cb14b61f1c43119361c310d362917663c0c"
+    },
+    {
+      "book": "Romans",
+      "chapter": 2,
+      "textPath": "./data/romans-2.json",
+      "hashPath": "./data/romans-2.sha256.txt",
+      "sha256": "831c891d209a381a1704ef49cf67ee6baeff9af318acbec8b078cd0565fc6e53"
+    },
+    {
+      "book": "Romans",
+      "chapter": 3,
+      "textPath": "./data/romans-3.json",
+      "hashPath": "./data/romans-3.sha256.txt",
+      "sha256": "1e3860eae303dba40a37ca6c8c0adc09874b6bca374a9679e680a09ad6ce2f45"
+    },
+    {
+      "book": "Romans",
+      "chapter": 4,
+      "textPath": "./data/romans-4.json",
+      "hashPath": "./data/romans-4.sha256.txt",
+      "sha256": "dd1fb305910228d272489de4a75a01407211d9a8466cc9981f7d4fc745cf8eaa"
+    },
+    {
+      "book": "Romans",
+      "chapter": 5,
+      "textPath": "./data/romans-5.json",
+      "hashPath": "./data/romans-5.sha256.txt",
+      "sha256": "5292cf68ed052d9ac713053b06bc360b8c2f6a2403f593efe908ea6c7a89988b"
+    },
+    {
+      "book": "Romans",
+      "chapter": 6,
+      "textPath": "./data/romans-6.json",
+      "hashPath": "./data/romans-6.sha256.txt",
+      "sha256": "60b9f0b42dcb8314c4609137be3ee849d10961d7b6265250a4db98704036ec3d"
+    },
+    {
+      "book": "Romans",
+      "chapter": 7,
+      "textPath": "./data/romans-7.json",
+      "hashPath": "./data/romans-7.sha256.txt",
+      "sha256": "1feaff19ec9f68ef8f6362fdf3200898b1d4e180b31d18fe8047e80edc352d07"
+    },
+    {
+      "book": "Romans",
+      "chapter": 8,
+      "textPath": "./data/romans-8.json",
+      "hashPath": "./data/romans-8.sha256.txt",
+      "sha256": "0f6e2ada31b7e0251e8a6fbd5de8f29f9eeab3b7380922f1c124b5d92553d82a"
+    },
+    {
+      "book": "Romans",
+      "chapter": 9,
+      "textPath": "./data/romans-9.json",
+      "hashPath": "./data/romans-9.sha256.txt",
+      "sha256": "c29153e39161ce11c7b049027dcc806eb108723e06864ce3deb529efc2af815e"
+    },
+    {
+      "book": "Romans",
+      "chapter": 10,
+      "textPath": "./data/romans-10.json",
+      "hashPath": "./data/romans-10.sha256.txt",
+      "sha256": "7fa00efdd77e1d976b61866c9537a880ca3b8e92c1ad1e3a039c5cfad284e2bc"
+    },
+    {
+      "book": "Romans",
+      "chapter": 11,
+      "textPath": "./data/romans-11.json",
+      "hashPath": "./data/romans-11.sha256.txt",
+      "sha256": "d827e65cde7076a34fa969facf3051923f360cac5b961e16dda38035f8825422"
+    },
+    {
+      "book": "Romans",
+      "chapter": 12,
+      "textPath": "./data/romans-12.json",
+      "hashPath": "./data/romans-12.sha256.txt",
+      "sha256": "50f42f82db82c116e187e4b8275a0ada9738a69a75734fd0ba071b59cefb1967"
+    },
+    {
+      "book": "Romans",
+      "chapter": 13,
+      "textPath": "./data/romans-13.json",
+      "hashPath": "./data/romans-13.sha256.txt",
+      "sha256": "527eafbea93042dc43898b8f34a0974ada535f275d968fd5e6d1080a0c6285ae"
+    },
+    {
+      "book": "Romans",
+      "chapter": 14,
+      "textPath": "./data/romans-14.json",
+      "hashPath": "./data/romans-14.sha256.txt",
+      "sha256": "cea553b6d0134c827340e4e335cb7565523167313e9a69158a29355e0f3fb47b"
+    },
+    {
+      "book": "Romans",
+      "chapter": 15,
+      "textPath": "./data/romans-15.json",
+      "hashPath": "./data/romans-15.sha256.txt",
+      "sha256": "f7221feeeae3971c4585787f7786b96a6a421d3e1dcceaed6b4a0c67c4a108c4"
+    },
+    {
+      "book": "Romans",
+      "chapter": 16,
+      "textPath": "./data/romans-16.json",
+      "hashPath": "./data/romans-16.sha256.txt",
+      "sha256": "72f4e62b9290edf3f938f4c0af50f19f38d21e7bc333e1460c2a9fa89d8dfebf"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 1,
+      "textPath": "./data/1-corinthians-1.json",
+      "hashPath": "./data/1-corinthians-1.sha256.txt",
+      "sha256": "98a5ecafa1cdf90675ac1d9906c9d3b4f7caf850db87b7a19657e13b42ff7efb"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 2,
+      "textPath": "./data/1-corinthians-2.json",
+      "hashPath": "./data/1-corinthians-2.sha256.txt",
+      "sha256": "f41fc4fe14b712d5f073e008d898169f753af9065122f8f54df3a171cc1d55a5"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 3,
+      "textPath": "./data/1-corinthians-3.json",
+      "hashPath": "./data/1-corinthians-3.sha256.txt",
+      "sha256": "8d7787e132760f34c934354a08f7fa652fc8bb26b4737b360326603b7db151fe"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 4,
+      "textPath": "./data/1-corinthians-4.json",
+      "hashPath": "./data/1-corinthians-4.sha256.txt",
+      "sha256": "e69fea91cc8852cfc179572582aec14fc5ed7a11c2990e3135eeac83d0520aef"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 5,
+      "textPath": "./data/1-corinthians-5.json",
+      "hashPath": "./data/1-corinthians-5.sha256.txt",
+      "sha256": "08e4b75e41e6539c1698ee93e9ee3a9d3bab72caa96632fcdbac0c1fdf275935"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 6,
+      "textPath": "./data/1-corinthians-6.json",
+      "hashPath": "./data/1-corinthians-6.sha256.txt",
+      "sha256": "a2d043d413cd13097a07e0852297ab6a7b302c459677188de9987f0ab8cdc221"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 7,
+      "textPath": "./data/1-corinthians-7.json",
+      "hashPath": "./data/1-corinthians-7.sha256.txt",
+      "sha256": "f6f20583893919effbf6c4157a5f3ac75fb985aa3c2f65802c796ca8d83a3b88"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 8,
+      "textPath": "./data/1-corinthians-8.json",
+      "hashPath": "./data/1-corinthians-8.sha256.txt",
+      "sha256": "a9bb8003feb7f0a7bd550b9e88e78a3741fc76ae51757518ea38df2d4c84e617"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 9,
+      "textPath": "./data/1-corinthians-9.json",
+      "hashPath": "./data/1-corinthians-9.sha256.txt",
+      "sha256": "4d51153cf92f6e9031507f0ebbf6f7794345e69f45f6ac2f3ddd735c34632e8b"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 10,
+      "textPath": "./data/1-corinthians-10.json",
+      "hashPath": "./data/1-corinthians-10.sha256.txt",
+      "sha256": "d339232d1f88dbe1d75d1eb4a9de83e72525dd179936feb2960a5cabd55bca67"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 11,
+      "textPath": "./data/1-corinthians-11.json",
+      "hashPath": "./data/1-corinthians-11.sha256.txt",
+      "sha256": "b11042fd7fb4742d4b717593f158d8b247c8ca0a8f808377aca4f04b48ce25c3"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 12,
+      "textPath": "./data/1-corinthians-12.json",
+      "hashPath": "./data/1-corinthians-12.sha256.txt",
+      "sha256": "0624e3406cc3fba471b10445d5dc660b8a2d6893137dcc7d28b82a68b124b6d5"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 13,
+      "textPath": "./data/1-corinthians-13.json",
+      "hashPath": "./data/1-corinthians-13.sha256.txt",
+      "sha256": "4c67280671cc6129ebc11caaf4f4df926cf3270c46bcda85208bccbcf85e98e0"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 14,
+      "textPath": "./data/1-corinthians-14.json",
+      "hashPath": "./data/1-corinthians-14.sha256.txt",
+      "sha256": "a463ebebd49f433ee1136496313d785200662c5856270dd415000e85be4de96a"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 15,
+      "textPath": "./data/1-corinthians-15.json",
+      "hashPath": "./data/1-corinthians-15.sha256.txt",
+      "sha256": "4099f4ed214f1f5c4bf3858adc8a504c1b36e39aec47205c654b2bb6992f854a"
+    },
+    {
+      "book": "1 Corinthians",
+      "chapter": 16,
+      "textPath": "./data/1-corinthians-16.json",
+      "hashPath": "./data/1-corinthians-16.sha256.txt",
+      "sha256": "8dd5c0f843918871adb2f9616b133033ef7953bf507b9b338d0afb019783495a"
+    },
+    {
+      "book": "2 Corinthians",
+      "chapter": 1,
+      "textPath": "./data/2-corinthians-1.json",
+      "hashPath": "./data/2-corinthians-1.sha256.txt",
+      "sha256": "292e4a1b95767590a3f1af7e6375a993fef47b6a128661329bdd9caad26e574d"
+    },
+    {
+      "book": "2 Corinthians",
+      "chapter": 2,
+      "textPath": "./data/2-corinthians-2.json",
+      "hashPath": "./data/2-corinthians-2.sha256.txt",
+      "sha256": "a5d52322049f97e8299826b6edf6654b59dd169b1464686ac1c431385a8ec77b"
+    },
+    {
+      "book": "2 Corinthians",
+      "chapter": 3,
+      "textPath": "./data/2-corinthians-3.json",
+      "hashPath": "./data/2-corinthians-3.sha256.txt",
+      "sha256": "ad0979d162236d5b10027c41968348d9e358116914b7e9ec682107298ec4cc81"
+    },
+    {
+      "book": "2 Corinthians",
+      "chapter": 4,
+      "textPath": "./data/2-corinthians-4.json",
+      "hashPath": "./data/2-corinthians-4.sha256.txt",
+      "sha256": "a0f09b0782bc7b38601c9b2c6860a63fc955eede8b049c112a845372f6af95dc"
+    },
+    {
+      "book": "2 Corinthians",
+      "chapter": 5,
+      "textPath": "./data/2-corinthians-5.json",
+      "hashPath": "./data/2-corinthians-5.sha256.txt",
+      "sha256": "bfbfe721bbf3905c8ca108052c6c57f9b45022cead042ccd3d3ef1426353eff1"
+    },
+    {
+      "book": "2 Corinthians",
+      "chapter": 6,
+      "textPath": "./data/2-corinthians-6.json",
+      "hashPath": "./data/2-corinthians-6.sha256.txt",
+      "sha256": "6653a9397ba25b1affff92c27d221f841b228f6ddb794cc38ea92cf9e439dedb"
+    },
+    {
+      "book": "2 Corinthians",
+      "chapter": 7,
+      "textPath": "./data/2-corinthians-7.json",
+      "hashPath": "./data/2-corinthians-7.sha256.txt",
+      "sha256": "1b0772a3143e10b2ac0cd84882ef6d1a386c4b440de1d66b41442f9fcf87b9ff"
+    },
+    {
+      "book": "2 Corinthians",
+      "chapter": 8,
+      "textPath": "./data/2-corinthians-8.json",
+      "hashPath": "./data/2-corinthians-8.sha256.txt",
+      "sha256": "3d048cd5a9159dd06d9fc065fa0731b86ff0df8a85e6d1022deb990de4a4860d"
+    },
+    {
+      "book": "2 Corinthians",
+      "chapter": 9,
+      "textPath": "./data/2-corinthians-9.json",
+      "hashPath": "./data/2-corinthians-9.sha256.txt",
+      "sha256": "b71b772c2643f00000273e43688b240074690a0f85a3c6d54941891c759aa6bb"
+    },
+    {
+      "book": "2 Corinthians",
+      "chapter": 10,
+      "textPath": "./data/2-corinthians-10.json",
+      "hashPath": "./data/2-corinthians-10.sha256.txt",
+      "sha256": "89c327dc3b7d36c02acdb9dc75f633e9ecdb402ce71b10b2f15ebadda4179ff7"
+    },
+    {
+      "book": "2 Corinthians",
+      "chapter": 11,
+      "textPath": "./data/2-corinthians-11.json",
+      "hashPath": "./data/2-corinthians-11.sha256.txt",
+      "sha256": "3ab6e157ba25edb76066fee1e84fb1074bdca830f36546194a1c5e21be2ad33f"
+    },
+    {
+      "book": "2 Corinthians",
+      "chapter": 12,
+      "textPath": "./data/2-corinthians-12.json",
+      "hashPath": "./data/2-corinthians-12.sha256.txt",
+      "sha256": "6ca223e140fe5ed80c9f75a91becc89c8abe38bc1d4eab82d48131d8cbf29b9a"
+    },
+    {
+      "book": "2 Corinthians",
+      "chapter": 13,
+      "textPath": "./data/2-corinthians-13.json",
+      "hashPath": "./data/2-corinthians-13.sha256.txt",
+      "sha256": "d71ddad6bb8155e6215c046664460c7a9cd959a6cac22d74f120ea8de634e46c"
+    },
+    {
+      "book": "Galatians",
+      "chapter": 1,
+      "textPath": "./data/galatians-1.json",
+      "hashPath": "./data/galatians-1.sha256.txt",
+      "sha256": "1b5d41e74313b1274228f325ffb236ca7031e5ab44b5de50b21cf141a0366186"
+    },
+    {
+      "book": "Galatians",
+      "chapter": 2,
+      "textPath": "./data/galatians-2.json",
+      "hashPath": "./data/galatians-2.sha256.txt",
+      "sha256": "52b807ab43c14adf6ff0f3dec66ab2dd786e3fe6565fa37b1a1f6b4dcf7f8912"
+    },
+    {
+      "book": "Galatians",
+      "chapter": 3,
+      "textPath": "./data/galatians-3.json",
+      "hashPath": "./data/galatians-3.sha256.txt",
+      "sha256": "239049848a3db558af0d805ce613f358e7ce6912cb246626d154fce121189275"
+    },
+    {
+      "book": "Galatians",
+      "chapter": 4,
+      "textPath": "./data/galatians-4.json",
+      "hashPath": "./data/galatians-4.sha256.txt",
+      "sha256": "7cd9e98e85a073748cff30aad73ac8d5c7a87e8f6435c49baf5275854b640be8"
+    },
+    {
+      "book": "Galatians",
+      "chapter": 5,
+      "textPath": "./data/galatians-5.json",
+      "hashPath": "./data/galatians-5.sha256.txt",
+      "sha256": "b73e2be3bd4c98fdcce5845bcfcdd84af6f417eb442d01fb0200a6f5a65584b5"
+    },
+    {
+      "book": "Galatians",
+      "chapter": 6,
+      "textPath": "./data/galatians-6.json",
+      "hashPath": "./data/galatians-6.sha256.txt",
+      "sha256": "0468697338f3a40a6b8ac17eff318ef84b848b62f5160898487dcd8ccbeb50ed"
+    },
+    {
+      "book": "Ephesians",
+      "chapter": 1,
+      "textPath": "./data/ephesians-1.json",
+      "hashPath": "./data/ephesians-1.sha256.txt",
+      "sha256": "36e4116f37bf5fec52a51b417c06f2ab422f9b2b347046bde4f7e932d7e71144"
+    },
+    {
+      "book": "Ephesians",
+      "chapter": 2,
+      "textPath": "./data/ephesians-2.json",
+      "hashPath": "./data/ephesians-2.sha256.txt",
+      "sha256": "ce2e22ef5635f188e3b7c279ddf06b5eb3c2d9b42abc9e04efe586e1f7454ec8"
+    },
+    {
+      "book": "Ephesians",
+      "chapter": 3,
+      "textPath": "./data/ephesians-3.json",
+      "hashPath": "./data/ephesians-3.sha256.txt",
+      "sha256": "c613464e81161764dfb340b57ed41bc3bd6123e28247117d7d06f704c7e8044e"
+    },
+    {
+      "book": "Ephesians",
+      "chapter": 4,
+      "textPath": "./data/ephesians-4.json",
+      "hashPath": "./data/ephesians-4.sha256.txt",
+      "sha256": "855626762edcba6f474cef01bb6dc89480e4e6379743f17e196305f6f1c29c00"
+    },
+    {
+      "book": "Ephesians",
+      "chapter": 5,
+      "textPath": "./data/ephesians-5.json",
+      "hashPath": "./data/ephesians-5.sha256.txt",
+      "sha256": "39a07bfd89b066f8250bdad2ae3fb99aa1ed50119614e0be5a558e4eb9b79a1b"
+    },
+    {
+      "book": "Ephesians",
+      "chapter": 6,
+      "textPath": "./data/ephesians-6.json",
+      "hashPath": "./data/ephesians-6.sha256.txt",
+      "sha256": "c7a83f29de5b0be900a2b284b5cd1aaab0a282253dc6d97c8743405251c90008"
+    },
+    {
+      "book": "Philippians",
+      "chapter": 1,
+      "textPath": "./data/philippians-1.json",
+      "hashPath": "./data/philippians-1.sha256.txt",
+      "sha256": "2b9ff640a809addd3004b2dcd535628ff5ba1d00fa7667b3672ade04b4e89e34"
+    },
+    {
+      "book": "Philippians",
+      "chapter": 2,
+      "textPath": "./data/philippians-2.json",
+      "hashPath": "./data/philippians-2.sha256.txt",
+      "sha256": "ae277fd0e747f07f77e27d11a86590b4179828cf1dac574fa358a7183cf49ba1"
+    },
+    {
+      "book": "Philippians",
+      "chapter": 3,
+      "textPath": "./data/philippians-3.json",
+      "hashPath": "./data/philippians-3.sha256.txt",
+      "sha256": "3864a84b05ac375f3b7fa8122f9d9db6e65a241d55343584d05d6b9312e2aba9"
+    },
+    {
+      "book": "Philippians",
+      "chapter": 4,
+      "textPath": "./data/philippians-4.json",
+      "hashPath": "./data/philippians-4.sha256.txt",
+      "sha256": "23bb906fc09b39de44203564747f9e7e349964dde5ae46f016ff7963e1e767f1"
+    },
+    {
+      "book": "Colossians",
+      "chapter": 1,
+      "textPath": "./data/colossians-1.json",
+      "hashPath": "./data/colossians-1.sha256.txt",
+      "sha256": "6201f7995c9f3e47c38b5413b73411ff3b760a51a4c48f194bcff3e0b75f088c"
+    },
+    {
+      "book": "Colossians",
+      "chapter": 2,
+      "textPath": "./data/colossians-2.json",
+      "hashPath": "./data/colossians-2.sha256.txt",
+      "sha256": "77ce560c25666212f6f3a3a9cd479f6d86962214aab20dd731e83a89b0a6ed98"
+    },
+    {
+      "book": "Colossians",
+      "chapter": 3,
+      "textPath": "./data/colossians-3.json",
+      "hashPath": "./data/colossians-3.sha256.txt",
+      "sha256": "bce52d60265f4c3a327f59738d0227c108b70d56422fe3b7b3be8344219b5b93"
+    },
+    {
+      "book": "Colossians",
+      "chapter": 4,
+      "textPath": "./data/colossians-4.json",
+      "hashPath": "./data/colossians-4.sha256.txt",
+      "sha256": "b5cd1e2b5546c7246f79bd1a481ad4972ec4f8c0450af97a990508ed336c27c8"
+    },
+    {
+      "book": "1 Thessalonians",
+      "chapter": 1,
+      "textPath": "./data/1-thessalonians-1.json",
+      "hashPath": "./data/1-thessalonians-1.sha256.txt",
+      "sha256": "d50148ed57aa4792e24b9435aac6e1be3933b718e210d46400f1b66e5fea8300"
+    },
+    {
+      "book": "1 Thessalonians",
+      "chapter": 2,
+      "textPath": "./data/1-thessalonians-2.json",
+      "hashPath": "./data/1-thessalonians-2.sha256.txt",
+      "sha256": "fac5d790ae6130a2426f45dae18c5aa3865c7a83ffcef84d2ab16f1d9ceeb575"
+    },
+    {
+      "book": "1 Thessalonians",
+      "chapter": 3,
+      "textPath": "./data/1-thessalonians-3.json",
+      "hashPath": "./data/1-thessalonians-3.sha256.txt",
+      "sha256": "de6a0815768c828be3834761f3d2ae2e56f423a1c4de3f6a159cfa88e4bc16a1"
+    },
+    {
+      "book": "1 Thessalonians",
+      "chapter": 4,
+      "textPath": "./data/1-thessalonians-4.json",
+      "hashPath": "./data/1-thessalonians-4.sha256.txt",
+      "sha256": "f308b0fdbbe75a4758240f1e99e9086b999553ba70153cfb8bc5af4fee9366e5"
+    },
+    {
+      "book": "1 Thessalonians",
+      "chapter": 5,
+      "textPath": "./data/1-thessalonians-5.json",
+      "hashPath": "./data/1-thessalonians-5.sha256.txt",
+      "sha256": "e8bed5a45f7127f8d8060f76c358756046892fe7abcec80b02caf91cb649256f"
+    },
+    {
+      "book": "2 Thessalonians",
+      "chapter": 1,
+      "textPath": "./data/2-thessalonians-1.json",
+      "hashPath": "./data/2-thessalonians-1.sha256.txt",
+      "sha256": "64674ee6da0835012ecea42ea2c1b3da440fbc4d28936c2c5022ba9ffccee6b2"
+    },
+    {
+      "book": "2 Thessalonians",
+      "chapter": 2,
+      "textPath": "./data/2-thessalonians-2.json",
+      "hashPath": "./data/2-thessalonians-2.sha256.txt",
+      "sha256": "5dfa62e245cadcb4cde529b97018f06b6cc302c3912deea9e474581c918533b2"
+    },
+    {
+      "book": "2 Thessalonians",
+      "chapter": 3,
+      "textPath": "./data/2-thessalonians-3.json",
+      "hashPath": "./data/2-thessalonians-3.sha256.txt",
+      "sha256": "cfb4a624dd1c16d0fc4aec4cbe564f7958d734c170c0d960d1d945831c256216"
+    },
+    {
+      "book": "1 Timothy",
+      "chapter": 1,
+      "textPath": "./data/1-timothy-1.json",
+      "hashPath": "./data/1-timothy-1.sha256.txt",
+      "sha256": "e6f03d17b42611ebcdd12b8afe7e1952af3e61ef7fa1438d0affc9edb254c53b"
+    },
+    {
+      "book": "1 Timothy",
+      "chapter": 2,
+      "textPath": "./data/1-timothy-2.json",
+      "hashPath": "./data/1-timothy-2.sha256.txt",
+      "sha256": "9752520450708889ed6c1a8ea60cbdf3664e2525119ba3869949c7f8ccb78b02"
+    },
+    {
+      "book": "1 Timothy",
+      "chapter": 3,
+      "textPath": "./data/1-timothy-3.json",
+      "hashPath": "./data/1-timothy-3.sha256.txt",
+      "sha256": "cffca644a2f4f1f730c75beb7a83d794d74d90c158c5f1574bb461f70e421a32"
+    },
+    {
+      "book": "1 Timothy",
+      "chapter": 4,
+      "textPath": "./data/1-timothy-4.json",
+      "hashPath": "./data/1-timothy-4.sha256.txt",
+      "sha256": "9915d6e900f0f627fd00470ba1ca64baabaa6db22787d7e1e61a41bf9e38e85a"
+    },
+    {
+      "book": "1 Timothy",
+      "chapter": 5,
+      "textPath": "./data/1-timothy-5.json",
+      "hashPath": "./data/1-timothy-5.sha256.txt",
+      "sha256": "b03c16f99e785f175380b46bcec756a69aab7984a03e0cb02e160710ab6e9dc3"
+    },
+    {
+      "book": "1 Timothy",
+      "chapter": 6,
+      "textPath": "./data/1-timothy-6.json",
+      "hashPath": "./data/1-timothy-6.sha256.txt",
+      "sha256": "19fa1ace981c3023ab50e1a95f9a6e60a44e8f2c88f470480e823f227aca558e"
+    },
+    {
+      "book": "2 Timothy",
+      "chapter": 1,
+      "textPath": "./data/2-timothy-1.json",
+      "hashPath": "./data/2-timothy-1.sha256.txt",
+      "sha256": "d8168bb944f8d50395861c65a63da5468172f57529df487e5b552b405302de01"
+    },
+    {
+      "book": "2 Timothy",
+      "chapter": 2,
+      "textPath": "./data/2-timothy-2.json",
+      "hashPath": "./data/2-timothy-2.sha256.txt",
+      "sha256": "d847ef1bf36e7199fa0fbe875d82da3506948a2587293b3211e1b1763fafbcba"
+    },
+    {
+      "book": "2 Timothy",
+      "chapter": 3,
+      "textPath": "./data/2-timothy-3.json",
+      "hashPath": "./data/2-timothy-3.sha256.txt",
+      "sha256": "2faabee2c6f226a5da48e9b7266c99906c63406fc5bcc6737b3968419d90e3ec"
+    },
+    {
+      "book": "2 Timothy",
+      "chapter": 4,
+      "textPath": "./data/2-timothy-4.json",
+      "hashPath": "./data/2-timothy-4.sha256.txt",
+      "sha256": "ce45cb384b352abd9df031e0ea94baa50fc3227f90bf7287b631a01c06736ee9"
+    },
+    {
+      "book": "Titus",
+      "chapter": 1,
+      "textPath": "./data/titus-1.json",
+      "hashPath": "./data/titus-1.sha256.txt",
+      "sha256": "f1f32da7821df80ec12d2def0bb376d5f7469ae18d608f4f78b936d8bdee541b"
+    },
+    {
+      "book": "Titus",
+      "chapter": 2,
+      "textPath": "./data/titus-2.json",
+      "hashPath": "./data/titus-2.sha256.txt",
+      "sha256": "7e3b581c4465e066daadb621df8ad00c696936c22a5450156ae68fab2d0ff5c3"
+    },
+    {
+      "book": "Titus",
+      "chapter": 3,
+      "textPath": "./data/titus-3.json",
+      "hashPath": "./data/titus-3.sha256.txt",
+      "sha256": "5777280007beeb2a42831603624b6bbb1245c183ef9c05c81fc9c5a5a4cef406"
+    },
+    {
+      "book": "Philemon",
+      "chapter": 1,
+      "textPath": "./data/philemon-1.json",
+      "hashPath": "./data/philemon-1.sha256.txt",
+      "sha256": "0dc418a4599244c0115ae4875418bdd04978904644a52f8acdf43a385b3c8827"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 1,
+      "textPath": "./data/hebrews-1.json",
+      "hashPath": "./data/hebrews-1.sha256.txt",
+      "sha256": "9b0aac370eb8682211517030a9cd8b84a3b655c072336793e3a5889c4389c6ff"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 2,
+      "textPath": "./data/hebrews-2.json",
+      "hashPath": "./data/hebrews-2.sha256.txt",
+      "sha256": "4f74af55155f382dd2250f32b8d8cc3928da6a5fb0fb7b5b56ffefab745ef445"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 3,
+      "textPath": "./data/hebrews-3.json",
+      "hashPath": "./data/hebrews-3.sha256.txt",
+      "sha256": "4ae448a2ecbd4ced67ce5c0b2269a6c9b9a35eb67894514c42a39a08eb63d56a"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 4,
+      "textPath": "./data/hebrews-4.json",
+      "hashPath": "./data/hebrews-4.sha256.txt",
+      "sha256": "84fee1a6132fc968a426ec534f449f749b4e53c43be80f8b9c8bbdcad215a72b"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 5,
+      "textPath": "./data/hebrews-5.json",
+      "hashPath": "./data/hebrews-5.sha256.txt",
+      "sha256": "899cdc249f690759d7335b4488910bc779d6b5505ae1989f69a84798727d39b3"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 6,
+      "textPath": "./data/hebrews-6.json",
+      "hashPath": "./data/hebrews-6.sha256.txt",
+      "sha256": "6e7f6c86d96ef6b892e1e2792aa933b3511ee5ffc3acadf246a57dbf86f3ad4c"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 7,
+      "textPath": "./data/hebrews-7.json",
+      "hashPath": "./data/hebrews-7.sha256.txt",
+      "sha256": "29439ce71199694b8e28e833adfcfc49f19f89be177522555dc6e8fb6a7670fd"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 8,
+      "textPath": "./data/hebrews-8.json",
+      "hashPath": "./data/hebrews-8.sha256.txt",
+      "sha256": "8ed6894a2211c58077ca4c8a298d034253bd5f52fecbb8e0cdae0c65f92a8a1f"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 9,
+      "textPath": "./data/hebrews-9.json",
+      "hashPath": "./data/hebrews-9.sha256.txt",
+      "sha256": "c09c8d1260d7c920f7882366037c4f3cfd08e547b92dda21e76a2200000719de"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 10,
+      "textPath": "./data/hebrews-10.json",
+      "hashPath": "./data/hebrews-10.sha256.txt",
+      "sha256": "88a4c6b12572beb29e8833fe8a35087e02de6a9efbf8a3042fd62b21e8148218"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 11,
+      "textPath": "./data/hebrews-11.json",
+      "hashPath": "./data/hebrews-11.sha256.txt",
+      "sha256": "37ff807f66aa70cfda34b45670266ff9904288534e872829cbac29b902e1e3db"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 12,
+      "textPath": "./data/hebrews-12.json",
+      "hashPath": "./data/hebrews-12.sha256.txt",
+      "sha256": "60d201e6fd0bb3f39d3af79c5f771e619d1c0220eed971284267f88451d598d6"
+    },
+    {
+      "book": "Hebrews",
+      "chapter": 13,
+      "textPath": "./data/hebrews-13.json",
+      "hashPath": "./data/hebrews-13.sha256.txt",
+      "sha256": "1fbd011355f5214cac07586884346b8a2f68b870f5479a1df71d18e9338ecddd"
+    },
+    {
+      "book": "James",
+      "chapter": 1,
+      "textPath": "./data/james-1.json",
+      "hashPath": "./data/james-1.sha256.txt",
+      "sha256": "d3158060b92606f702c038b82df226b496698ba64fb52f69ef88a07d994faa63"
+    },
+    {
+      "book": "James",
+      "chapter": 2,
+      "textPath": "./data/james-2.json",
+      "hashPath": "./data/james-2.sha256.txt",
+      "sha256": "6f5b5e89600d533dbad7fa67bcd253841465c98eb3b2f61471b1e5aff6db3fc0"
+    },
+    {
+      "book": "James",
+      "chapter": 3,
+      "textPath": "./data/james-3.json",
+      "hashPath": "./data/james-3.sha256.txt",
+      "sha256": "450f768a5cab0fe3fb6f53ac7179b1ae3cd560118d86e6200bd5be991275a8fe"
+    },
+    {
+      "book": "James",
+      "chapter": 4,
+      "textPath": "./data/james-4.json",
+      "hashPath": "./data/james-4.sha256.txt",
+      "sha256": "0f013cf2340be7c1f157654e596d6a4cd2d7468a0a6774d47d36a0b7eca1315e"
+    },
+    {
+      "book": "James",
+      "chapter": 5,
+      "textPath": "./data/james-5.json",
+      "hashPath": "./data/james-5.sha256.txt",
+      "sha256": "9d2ba78423e2100db35e603b6cfa496930604c4e0a80dcf2b9c5eca6d34a4d8f"
+    },
+    {
+      "book": "1 Peter",
+      "chapter": 1,
+      "textPath": "./data/1-peter-1.json",
+      "hashPath": "./data/1-peter-1.sha256.txt",
+      "sha256": "99074d99883c782ef108b5b90824bde0a6ff9d94097bbdb07b0993423adcd4c6"
+    },
+    {
+      "book": "1 Peter",
+      "chapter": 2,
+      "textPath": "./data/1-peter-2.json",
+      "hashPath": "./data/1-peter-2.sha256.txt",
+      "sha256": "c1aea68fe05530d0cbfaf9df57a26aca49526985c64a5c8da4a02b501ed4aa7d"
+    },
+    {
+      "book": "1 Peter",
+      "chapter": 3,
+      "textPath": "./data/1-peter-3.json",
+      "hashPath": "./data/1-peter-3.sha256.txt",
+      "sha256": "56cab00ddf63c9c5fb8b637053a36f03ffaac2a9d5c94bfb3ec72e1d6baf0ca7"
+    },
+    {
+      "book": "1 Peter",
+      "chapter": 4,
+      "textPath": "./data/1-peter-4.json",
+      "hashPath": "./data/1-peter-4.sha256.txt",
+      "sha256": "69a240c7b3f99348ec179f8aaf4694d493fb05b3ebf5e968b277fbb2464f2a72"
+    },
+    {
+      "book": "1 Peter",
+      "chapter": 5,
+      "textPath": "./data/1-peter-5.json",
+      "hashPath": "./data/1-peter-5.sha256.txt",
+      "sha256": "de392e5afd4285d65a47ba696a47cfe1d6b47e359cd9eefdb42ef8f30841e10a"
+    },
+    {
+      "book": "2 Peter",
+      "chapter": 1,
+      "textPath": "./data/2-peter-1.json",
+      "hashPath": "./data/2-peter-1.sha256.txt",
+      "sha256": "45e567adb63108c491d945374ced667d41b90d1626b4b6e4dc9d4c1f1ffa08c8"
+    },
+    {
+      "book": "2 Peter",
+      "chapter": 2,
+      "textPath": "./data/2-peter-2.json",
+      "hashPath": "./data/2-peter-2.sha256.txt",
+      "sha256": "08828d92b3e20ac87a5699f016361b681a692341cfd533d4814b225cebb45114"
+    },
+    {
+      "book": "2 Peter",
+      "chapter": 3,
+      "textPath": "./data/2-peter-3.json",
+      "hashPath": "./data/2-peter-3.sha256.txt",
+      "sha256": "fcb214da4b2ad22a9303814695d25e7f0a08956fb72053989e690f23ba4a7919"
+    },
+    {
+      "book": "1 John",
+      "chapter": 1,
+      "textPath": "./data/1-john-1.json",
+      "hashPath": "./data/1-john-1.sha256.txt",
+      "sha256": "d1f3b80b2d5fd0612c54e9a70e1e870bd7fb4988e21fd95ebae610e6c76ce841"
+    },
+    {
+      "book": "1 John",
+      "chapter": 2,
+      "textPath": "./data/1-john-2.json",
+      "hashPath": "./data/1-john-2.sha256.txt",
+      "sha256": "9e1ec8dee48c43dfb8e65af8e29c701a8d88ef4fd47e4487dbbfef9bc076ccd3"
+    },
+    {
+      "book": "1 John",
+      "chapter": 3,
+      "textPath": "./data/1-john-3.json",
+      "hashPath": "./data/1-john-3.sha256.txt",
+      "sha256": "052cf60512abed0c6b6e6d442005dd1989e1c95db22f2414f8c12e9dea2fd422"
+    },
+    {
+      "book": "1 John",
+      "chapter": 4,
+      "textPath": "./data/1-john-4.json",
+      "hashPath": "./data/1-john-4.sha256.txt",
+      "sha256": "682ea3ffd2075a92af3ac75eefef16430e64b46a0dadefcf7cd026b25b3dd9bd"
+    },
+    {
+      "book": "1 John",
+      "chapter": 5,
+      "textPath": "./data/1-john-5.json",
+      "hashPath": "./data/1-john-5.sha256.txt",
+      "sha256": "0bc23b208ed2d95f683185394fa73eb473635f2acccee8a228c85ae109834539"
+    },
+    {
+      "book": "2 John",
+      "chapter": 1,
+      "textPath": "./data/2-john-1.json",
+      "hashPath": "./data/2-john-1.sha256.txt",
+      "sha256": "c7fdb77bd7767f5a6670eedf75a9a35b86dfbcbe64514230e6c92aa0b59b3a18"
+    },
+    {
+      "book": "3 John",
+      "chapter": 1,
+      "textPath": "./data/3-john-1.json",
+      "hashPath": "./data/3-john-1.sha256.txt",
+      "sha256": "7f7c4b4bda890c3327199b81b4f68ec7a6488657def834e62b0379562f9a05c3"
+    },
+    {
+      "book": "Jude",
+      "chapter": 1,
+      "textPath": "./data/jude-1.json",
+      "hashPath": "./data/jude-1.sha256.txt",
+      "sha256": "73d2904270cb46d39a9fb2a617eb1ba11e90f86bac7412fae907a8aeff28cb48"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 1,
+      "textPath": "./data/revelation-1.json",
+      "hashPath": "./data/revelation-1.sha256.txt",
+      "sha256": "f2ba67c872208146203e42dc9b35aad77dff2498655c87d149c36b78f656cb8d"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 2,
+      "textPath": "./data/revelation-2.json",
+      "hashPath": "./data/revelation-2.sha256.txt",
+      "sha256": "63b1f5c7ef93826728d5d5c6e7ed0c8835e482c99f5b6915f7230f171ded0e0d"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 3,
+      "textPath": "./data/revelation-3.json",
+      "hashPath": "./data/revelation-3.sha256.txt",
+      "sha256": "8fdcdde90ccee7fa0e41c32cfe545b25731e630e5186897907a2c5d647f2015e"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 4,
+      "textPath": "./data/revelation-4.json",
+      "hashPath": "./data/revelation-4.sha256.txt",
+      "sha256": "9c4a89ff33b54ac89d69a5c77554430638f57ae09b45af1ecf56d7b59905b7e4"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 5,
+      "textPath": "./data/revelation-5.json",
+      "hashPath": "./data/revelation-5.sha256.txt",
+      "sha256": "3073ab67b0a20f1ce6647041a9a53a3d79849c4195d57eac9c537b2d8525766e"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 6,
+      "textPath": "./data/revelation-6.json",
+      "hashPath": "./data/revelation-6.sha256.txt",
+      "sha256": "02ac5b18422ff9ae1ea55c48277322783a38ce370eb09c50b01f008e0df68233"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 7,
+      "textPath": "./data/revelation-7.json",
+      "hashPath": "./data/revelation-7.sha256.txt",
+      "sha256": "300feb850e6ed02449fc56ae42c9f2a0d8b75e93bf449a1e8ad254fd43855ef4"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 8,
+      "textPath": "./data/revelation-8.json",
+      "hashPath": "./data/revelation-8.sha256.txt",
+      "sha256": "0801f3adc368c1be60f8ce0f83a101328b75552474567af3887bcaecb5a7afcd"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 9,
+      "textPath": "./data/revelation-9.json",
+      "hashPath": "./data/revelation-9.sha256.txt",
+      "sha256": "2eb60b984352a6e6943825d0f2e23801716ef9208faad1f9bb5a2f910c62d6eb"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 10,
+      "textPath": "./data/revelation-10.json",
+      "hashPath": "./data/revelation-10.sha256.txt",
+      "sha256": "62242a6794c4f66ccae1770713335b159d534d9d5142b4522715ad08eab6faa2"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 11,
+      "textPath": "./data/revelation-11.json",
+      "hashPath": "./data/revelation-11.sha256.txt",
+      "sha256": "77c53fce5a710b87d375e4c98c3fbc9b7b460e8cbc0f71c53c4d058a7851ece9"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 12,
+      "textPath": "./data/revelation-12.json",
+      "hashPath": "./data/revelation-12.sha256.txt",
+      "sha256": "86e5e4fb8b6f49bae66cc7078ad05cdc4c8a5c3cca2982b02b2c66ec8a0bd279"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 13,
+      "textPath": "./data/revelation-13.json",
+      "hashPath": "./data/revelation-13.sha256.txt",
+      "sha256": "4f51c16b14bae8169af72c20e36a2ddcd8486ae550f246cb80d80d85ecbb90f1"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 14,
+      "textPath": "./data/revelation-14.json",
+      "hashPath": "./data/revelation-14.sha256.txt",
+      "sha256": "adeb18bd9008c083e3ad7ca7a4c78e972532dae5764e29955590d51d85e63e94"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 15,
+      "textPath": "./data/revelation-15.json",
+      "hashPath": "./data/revelation-15.sha256.txt",
+      "sha256": "c63aafb01ce3f19f320e6d24f19b3504fbd826a7891035ba11a3777de53481b3"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 16,
+      "textPath": "./data/revelation-16.json",
+      "hashPath": "./data/revelation-16.sha256.txt",
+      "sha256": "3c3e075db610f8eff799ae7c0ad8a2c95b7ee4734eb843b02691ba9d7286e83a"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 17,
+      "textPath": "./data/revelation-17.json",
+      "hashPath": "./data/revelation-17.sha256.txt",
+      "sha256": "8b244f270b1b1687733ea0b79014c35ddfba83f427524753e05fb7c476d0a0e7"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 18,
+      "textPath": "./data/revelation-18.json",
+      "hashPath": "./data/revelation-18.sha256.txt",
+      "sha256": "22be5008566329fb1dd78d696e4d3de180eb6a3ae245baa0f014b7e4ef8077b6"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 19,
+      "textPath": "./data/revelation-19.json",
+      "hashPath": "./data/revelation-19.sha256.txt",
+      "sha256": "c8912a2763a8bd6b77955abbe1dc181b8923c64d13191c56729a214bec3c1145"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 20,
+      "textPath": "./data/revelation-20.json",
+      "hashPath": "./data/revelation-20.sha256.txt",
+      "sha256": "95ff13591d0992c1d9a0697562fd8ccc4e9c2d7d4e929a4103b945338ac969b1"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 21,
+      "textPath": "./data/revelation-21.json",
+      "hashPath": "./data/revelation-21.sha256.txt",
+      "sha256": "0ed41391e86fdd4a3a120623f1a6e64df928208c4e94405f8f9e4682b01cd7ab"
+    },
+    {
+      "book": "Revelation",
+      "chapter": 22,
+      "textPath": "./data/revelation-22.json",
+      "hashPath": "./data/revelation-22.sha256.txt",
+      "sha256": "d11d1e5863543be9fd085bc78af1c3839802dff9ad1cd57e36d8e2762aa78f5f"
     }
   ],
   "source": {
     "provider": "Project Gutenberg",
     "sourceFile": "source/kjv-gutenberg.txt",
-    "importedCollection": "The Four Gospels",
+    "importedCollection": "New Testament",
     "importedBooks": [
       "Matthew",
       "Mark",
       "Luke",
-      "John"
+      "John",
+      "Acts",
+      "Romans",
+      "1 Corinthians",
+      "2 Corinthians",
+      "Galatians",
+      "Ephesians",
+      "Philippians",
+      "Colossians",
+      "1 Thessalonians",
+      "2 Thessalonians",
+      "1 Timothy",
+      "2 Timothy",
+      "Titus",
+      "Philemon",
+      "Hebrews",
+      "James",
+      "1 Peter",
+      "2 Peter",
+      "1 John",
+      "2 John",
+      "3 John",
+      "Jude",
+      "Revelation"
     ]
   }
 }
