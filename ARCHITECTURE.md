@@ -2,7 +2,7 @@
 
 Permanent Word is a static Scripture reader with local integrity verification.
 
-The current version builds a KJV New Testament reader from a tracked Project Gutenberg source file.
+The current version builds a KJV full Bible reader from a tracked Project Gutenberg source file.
 
 The project is intentionally simple:
 
@@ -27,7 +27,7 @@ A chapter file should be understandable without a special application, framework
 Example:
 
 ```text
-data/romans-8.json
+data/psalms-23.json
 ```
 
 ### 2. Verify the text locally
@@ -77,9 +77,9 @@ Modern editorial headings are not currently imported.
 ```text
 source/kjv-gutenberg.txt
         ↓
-scripts/import-gutenberg-new-testament.js
+scripts/import-gutenberg-full-bible.js
         ↓
-source/new-testament-gutenberg.json
+source/full-bible-gutenberg.json
         ↓
 scripts/build-data.js
         ↓
@@ -112,19 +112,19 @@ The browser app does the following:
 Example URL:
 
 ```text
-/#romans-8
+/#psalms-23
 ```
 
 Example data file:
 
 ```text
-data/romans-8.json
+data/psalms-23.json
 ```
 
 Example hash file:
 
 ```text
-data/romans-8.sha256.txt
+data/psalms-23.sha256.txt
 ```
 
 ## Stable chapter URLs
@@ -134,10 +134,11 @@ The app uses hash-based routing.
 Examples:
 
 ```text
-/#matthew-1
-/#john-3
+/#genesis-1
+/#psalms-23
+/#isaiah-53
+/#matthew-5
 /#romans-8
-/#1-corinthians-13
 /#revelation-21
 ```
 
@@ -154,13 +155,13 @@ A generated chapter file looks like this:
 ```json
 {
   "translation": "KJV",
-  "book": "Romans",
-  "chapter": 8,
+  "book": "Psalms",
+  "chapter": 23,
   "heading": "",
   "verses": [
     {
       "number": 1,
-      "text": "There is therefore now no condemnation..."
+      "text": "The LORD is my shepherd; I shall not want."
     }
   ]
 }
@@ -181,22 +182,22 @@ The manifest looks conceptually like this:
   "source": {
     "provider": "Project Gutenberg",
     "sourceFile": "source/kjv-gutenberg.txt",
-    "importedCollection": "New Testament",
-    "importedBooks": ["Matthew", "Mark", "Luke"]
+    "importedCollection": "Full Bible",
+    "importedBooks": ["Genesis", "Exodus", "Leviticus"]
   },
   "chapters": [
     {
-      "book": "Romans",
-      "chapter": 8,
-      "textPath": "./data/romans-8.json",
-      "hashPath": "./data/romans-8.sha256.txt",
+      "book": "Psalms",
+      "chapter": 23,
+      "textPath": "./data/psalms-23.json",
+      "hashPath": "./data/psalms-23.sha256.txt",
       "sha256": "..."
     }
   ]
 }
 ```
 
-The actual manifest includes all 260 New Testament chapters.
+The actual manifest includes all 1,189 Bible chapters.
 
 ## Verification layers
 
@@ -214,11 +215,11 @@ This verifies that the downloaded source file has not changed.
 ### 2. Imported collection hash
 
 ```text
-source/new-testament-gutenberg.json
-source/new-testament-gutenberg.sha256.txt
+source/full-bible-gutenberg.json
+source/full-bible-gutenberg.sha256.txt
 ```
 
-This verifies the generated New Testament import.
+This verifies the generated full Bible import.
 
 ### 3. Chapter hashes
 
@@ -227,8 +228,8 @@ Each generated chapter has a hash file.
 Example:
 
 ```text
-data/romans-8.json
-data/romans-8.sha256.txt
+data/psalms-23.json
+data/psalms-23.sha256.txt
 ```
 
 ### 4. Manifest chapter hashes
@@ -239,8 +240,8 @@ Example:
 
 ```json
 {
-  "book": "Romans",
-  "chapter": 8,
+  "book": "Psalms",
+  "chapter": 23,
   "sha256": "..."
 }
 ```
@@ -284,9 +285,30 @@ Downloads the configured Project Gutenberg KJV source text and writes the local 
 
 Checks that the downloaded source file still matches its stored SHA-256 hash.
 
+### `scripts/import-gutenberg-full-bible.js`
+
+Parses the full Bible from the Gutenberg KJV source text.
+
+Expected output:
+
+```text
+Books: 66
+Chapters: 1,189
+Verses: 31,102
+```
+
+Generated files:
+
+```text
+source/full-bible-gutenberg.json
+source/full-bible-gutenberg.sha256.txt
+```
+
 ### `scripts/import-gutenberg-new-testament.js`
 
 Parses the New Testament from the Gutenberg KJV source text.
+
+This is retained as a smaller import workflow.
 
 Expected output:
 
@@ -296,12 +318,17 @@ Chapters: 260
 Verses: 7,957
 ```
 
-Generated files:
+### `scripts/import-gutenberg-gospels.js`
 
-```text
-source/new-testament-gutenberg.json
-source/new-testament-gutenberg.sha256.txt
-```
+Parses the Four Gospels from the Gutenberg KJV source text.
+
+This is retained as a smaller import workflow.
+
+### `scripts/import-gutenberg-john.js`
+
+Parses the Gospel of John from the Gutenberg KJV source text.
+
+This is retained as the original proof-of-concept import workflow.
 
 ### `scripts/build-data.js`
 
@@ -341,6 +368,7 @@ Defines the static reader structure:
 - Scripture text area
 - Verification panel
 - Source information panel
+- About / Method section
 - Mobile navigation
 
 ### `styles.css`
@@ -375,28 +403,35 @@ Static files are easy to:
 
 They also make the project a better fit for future decentralized storage.
 
+## Runtime dependency on Project Gutenberg
+
+Project Gutenberg is used as the historical source provider during the build process.
+
+Once the source file, generated import, chapter files, manifest, and hashes are preserved with the project, the running reader does not depend on Project Gutenberg being online.
+
+If this project is later published to IPFS or Arweave, the goal should be to preserve the actual static site and data files, not just a hash.
+
 ## Future architecture options
 
 Possible future additions:
 
-- Full Bible importer
-- Optional non-canonical section headings
-- About / Method page
+- Static deployment test
 - IPFS publishing script
 - Arweave publishing script
 - Manifest containing IPFS CIDs or Arweave transaction IDs
+- Optional non-canonical section headings
 - Offline bundle
 - Signed release hashes
 - Optional decentralized hash anchoring
 
 ## Current milestone
 
-Permanent Word currently functions as a verified static KJV New Testament reader.
+Permanent Word currently functions as a verified static KJV full Bible reader.
 
 Current expected generated data:
 
 ```text
-Books: 27
-Chapters: 260
-Verses: 7,957
+Books: 66
+Chapters: 1,189
+Verses: 31,102
 ```

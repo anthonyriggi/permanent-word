@@ -2,7 +2,7 @@
 
 Permanent Word is a lightweight, static Scripture reader with local text integrity verification.
 
-The current version imports the **New Testament** from a tracked Project Gutenberg KJV source file, generates one JSON file per chapter, and verifies the text using SHA-256 hashes.
+The current version imports the **full KJV Bible** from a tracked Project Gutenberg source file, generates one JSON file per chapter, and verifies the text using SHA-256 hashes.
 
 No framework.  
 No backend.  
@@ -13,11 +13,11 @@ No build step for the reader.
 
 Permanent Word currently supports:
 
-- KJV New Testament
-- Matthew through Revelation
-- 27 books
-- 260 chapters
-- 7,957 verses
+- KJV full Bible
+- Genesis through Revelation
+- 66 books
+- 1,189 chapters
+- 31,102 verses
 - Book and chapter selectors
 - Stable chapter URLs
 - Browser-based SHA-256 verification
@@ -26,9 +26,11 @@ Permanent Word currently supports:
 Example chapter URLs:
 
 ```text
-http://localhost:5500/#matthew-1
+http://localhost:5500/#genesis-1
+http://localhost:5500/#psalms-23
+http://localhost:5500/#isaiah-53
+http://localhost:5500/#matthew-5
 http://localhost:5500/#romans-8
-http://localhost:5500/#1-corinthians-13
 http://localhost:5500/#revelation-21
 ```
 
@@ -55,7 +57,7 @@ The source pipeline is:
 ```text
 Project Gutenberg KJV source text
 → source/kjv-gutenberg.txt
-→ source/new-testament-gutenberg.json
+→ source/full-bible-gutenberg.json
 → data/*.json chapter files
 → data/*.sha256.txt chapter hash files
 → data/manifest.json
@@ -95,7 +97,7 @@ This command does the full verification workflow:
 
 ```text
 1. Check the downloaded source file hash
-2. Import the New Testament from the source text
+2. Import the full Bible from the source text
 3. Generate chapter JSON files
 4. Generate chapter SHA-256 files
 5. Generate the manifest
@@ -106,12 +108,12 @@ This command does the full verification workflow:
 Expected final result:
 
 ```text
-Imported the New Testament from Gutenberg source.
-Books: 27
-Chapters: 260
-Verses: 7957
+Imported the full Bible from Gutenberg source.
+Books: 66
+Chapters: 1189
+Verses: 31102
 Permanent Word data generated.
-Chapters: 260
+Chapters: 1189
 ✅ All integrity checks passed.
 ```
 
@@ -129,13 +131,13 @@ Verify the downloaded source text:
 npm run source:check
 ```
 
-Import the New Testament:
+Import the full Bible:
 
 ```bash
-npm run source:import:nt
+npm run source:import:full
 ```
 
-Build reader data from the New Testament import:
+Build reader data from the full Bible import:
 
 ```bash
 npm run build:data
@@ -173,18 +175,19 @@ npm run start
 ├── data/
 │   ├── manifest.json
 │   ├── manifest.sha256.txt
-│   ├── matthew-1.json
-│   ├── matthew-1.sha256.txt
+│   ├── genesis-1.json
+│   ├── genesis-1.sha256.txt
 │   └── ...
 ├── source/
 │   ├── kjv-gutenberg.txt
 │   ├── kjv-gutenberg.sha256.txt
 │   ├── source-manifest.json
-│   ├── new-testament-gutenberg.json
-│   └── new-testament-gutenberg.sha256.txt
+│   ├── full-bible-gutenberg.json
+│   └── full-bible-gutenberg.sha256.txt
 └── scripts/
     ├── download-source.js
     ├── check-source.js
+    ├── import-gutenberg-full-bible.js
     ├── import-gutenberg-new-testament.js
     ├── import-gutenberg-gospels.js
     ├── import-gutenberg-john.js
@@ -197,13 +200,13 @@ npm run start
 Each chapter is generated as its own JSON file:
 
 ```text
-data/romans-8.json
+data/psalms-23.json
 ```
 
 Each chapter also has a hash file:
 
 ```text
-data/romans-8.sha256.txt
+data/psalms-23.sha256.txt
 ```
 
 The manifest lists every chapter and its canonical SHA-256 hash:
@@ -244,10 +247,10 @@ See `SOURCE.md` for more detail.
 
 Possible next steps:
 
-- Add an in-app About / Method section
-- Expand from New Testament to the full Bible
-- Improve source metadata display
-- Add optional non-canonical section headings
+- Test static deployment outside localhost
 - Add IPFS / Arweave publishing workflow
 - Add decentralized hash anchoring
+- Improve source metadata display
+- Add optional non-canonical section headings
 - Add offline package instructions
+- Add signed release hashes
