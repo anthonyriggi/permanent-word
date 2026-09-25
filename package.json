@@ -12,11 +12,13 @@
     "source:import:john": "node scripts/import-gutenberg-john.js",
     "source:import:gospels": "node scripts/import-gutenberg-gospels.js",
     "source:import:nt": "node scripts/import-gutenberg-new-testament.js",
-    "build:data": "node scripts/build-data.js source/new-testament-gutenberg.json",
+    "source:import:full": "node scripts/import-gutenberg-full-bible.js",
+    "build:data": "node scripts/build-data.js source/full-bible-gutenberg.json",
+    "build:nt": "node scripts/build-data.js source/new-testament-gutenberg.json",
     "build:gospels": "node scripts/build-data.js source/gospels-gutenberg.json",
     "build:john": "node scripts/build-data.js source/john-gutenberg.json",
     "build:sample": "node scripts/build-data.js source/john-sample.json",
     "check:data": "node scripts/check-data.js",
-    "verify": "npm run source:check && npm run source:import:nt && npm run build:data && npm run check:data"
+    "verify": "npm run source:check && npm run source:import:full && npm run build:data && npm run check:data"
   }
 }
