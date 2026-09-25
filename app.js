@@ -176,9 +176,14 @@ function setInitialChapterFromUrl() {
 function renderSourceInfo() {
   const source = manifest.source || {};
 
+  const importedLabel =
+    source.importedCollection ||
+    source.importedBook ||
+    (Array.isArray(source.importedBooks) ? source.importedBooks.join(", ") : "Unknown");
+
   sourceTranslation.textContent = manifest.translation || "Unknown";
   sourceProvider.textContent = source.provider || "Unknown";
-  sourceImportedBook.textContent = source.importedBook || "Unknown";
+  sourceImportedBook.textContent = importedLabel;
   sourceFile.textContent = source.sourceFile || "Unknown";
   sourceChapterCount.textContent = String(manifest.chapters.length);
 }

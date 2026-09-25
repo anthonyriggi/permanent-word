@@ -3,6 +3,482 @@
   "translation": "KJV",
   "chapters": [
     {
+      "book": "Matthew",
+      "chapter": 1,
+      "textPath": "./data/matthew-1.json",
+      "hashPath": "./data/matthew-1.sha256.txt",
+      "sha256": "9fe3bb0c48b82800aa02d6537710dab20fc5df2100678cc3fabc1cbbc11efcfb"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 2,
+      "textPath": "./data/matthew-2.json",
+      "hashPath": "./data/matthew-2.sha256.txt",
+      "sha256": "e4574cb77ca4d2b54eff80650c75da16a165c86ae8deca19583180226e218e8e"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 3,
+      "textPath": "./data/matthew-3.json",
+      "hashPath": "./data/matthew-3.sha256.txt",
+      "sha256": "428c374951fb881207bf91df7311a5f2b11866802ef46d66757ce143ea673c9d"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 4,
+      "textPath": "./data/matthew-4.json",
+      "hashPath": "./data/matthew-4.sha256.txt",
+      "sha256": "bd8313f7d3bd5d24ec420baf35cc0e6f12f79039710605dc25207667a248d280"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 5,
+      "textPath": "./data/matthew-5.json",
+      "hashPath": "./data/matthew-5.sha256.txt",
+      "sha256": "76acdb582e0891e9d09a86168e89a6572089ec1d1f9d9df1bfb1b500f5864f3e"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 6,
+      "textPath": "./data/matthew-6.json",
+      "hashPath": "./data/matthew-6.sha256.txt",
+      "sha256": "4daa57742e9d744862363eabd8134f4f79e48f1e6cbf15d85ac4537d658593ab"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 7,
+      "textPath": "./data/matthew-7.json",
+      "hashPath": "./data/matthew-7.sha256.txt",
+      "sha256": "3793fdce26b898f3d99b9bc1689f0d22d1e26c1da61a3be097ac4bda152e308d"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 8,
+      "textPath": "./data/matthew-8.json",
+      "hashPath": "./data/matthew-8.sha256.txt",
+      "sha256": "6affd1dbdde46d69d8ae2e93675a2918aa9097e483da1b1f435735fd2252f2a8"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 9,
+      "textPath": "./data/matthew-9.json",
+      "hashPath": "./data/matthew-9.sha256.txt",
+      "sha256": "b4a29c02b027a7524e31fcc26047d315db9fa71344dc3e8cf4708664be33c924"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 10,
+      "textPath": "./data/matthew-10.json",
+      "hashPath": "./data/matthew-10.sha256.txt",
+      "sha256": "b0aafee75f423c8b683aa76ccffaefa6755decc08b0943c523db92725064eb06"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 11,
+      "textPath": "./data/matthew-11.json",
+      "hashPath": "./data/matthew-11.sha256.txt",
+      "sha256": "852a752ea2dfec4b11434c1b990b75a8c665806be60bcfb71c5d978287c71e9e"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 12,
+      "textPath": "./data/matthew-12.json",
+      "hashPath": "./data/matthew-12.sha256.txt",
+      "sha256": "4fd873c1f32f7363415a09735b370375ea2686a3e511c3563772e27197719b9a"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 13,
+      "textPath": "./data/matthew-13.json",
+      "hashPath": "./data/matthew-13.sha256.txt",
+      "sha256": "5be34aa162e4f6f281e8251101d4f98b64096fa487cbb401abdc28b962b41929"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 14,
+      "textPath": "./data/matthew-14.json",
+      "hashPath": "./data/matthew-14.sha256.txt",
+      "sha256": "5d76ecaaf252a4b00acf07544ead765bcbdc17d08948df7ffd88f2f7d6eda262"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 15,
+      "textPath": "./data/matthew-15.json",
+      "hashPath": "./data/matthew-15.sha256.txt",
+      "sha256": "f6192d84bf79db9a5c56db07657ed9a0084217ba5ba0643436c40280cdcbcc5e"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 16,
+      "textPath": "./data/matthew-16.json",
+      "hashPath": "./data/matthew-16.sha256.txt",
+      "sha256": "b81fbbf884b33707c35b448c2334932a16dae12d5cfc7ae0d37263334cc37ccc"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 17,
+      "textPath": "./data/matthew-17.json",
+      "hashPath": "./data/matthew-17.sha256.txt",
+      "sha256": "47ebb3762005e19daaea911a85f22c0349fa034e50665b5ccd623768eabd2dcf"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 18,
+      "textPath": "./data/matthew-18.json",
+      "hashPath": "./data/matthew-18.sha256.txt",
+      "sha256": "0a77e545bfd3808d5bb215ab1c933daadb23b2ee7f0ce0850f5240139bb89811"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 19,
+      "textPath": "./data/matthew-19.json",
+      "hashPath": "./data/matthew-19.sha256.txt",
+      "sha256": "28e5cf0eb1c5db640be5279f54204f426a962e4fb11644946ba78c6eb50c9447"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 20,
+      "textPath": "./data/matthew-20.json",
+      "hashPath": "./data/matthew-20.sha256.txt",
+      "sha256": "afc6f225184b869528a39a3362dc60a803c88700c98265f84b212eb1c202d40e"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 21,
+      "textPath": "./data/matthew-21.json",
+      "hashPath": "./data/matthew-21.sha256.txt",
+      "sha256": "8d5a9d272b7f4d5861a8a1add545d2693132f661a5a7b3d68aba228e47d6e8be"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 22,
+      "textPath": "./data/matthew-22.json",
+      "hashPath": "./data/matthew-22.sha256.txt",
+      "sha256": "7523fdb59c0d72b13366bb3d330a01bce60de4588579eeb6eb298ce974698d86"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 23,
+      "textPath": "./data/matthew-23.json",
+      "hashPath": "./data/matthew-23.sha256.txt",
+      "sha256": "1dc31c2b8ec9a29634521d8cc31ce0e0a0fb26b0d6df62f694254afabffa89d6"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 24,
+      "textPath": "./data/matthew-24.json",
+      "hashPath": "./data/matthew-24.sha256.txt",
+      "sha256": "9566872b6865a0d04d7a8e503e44f9736a4118d087b8616e7fbb4cb0e0ad1ee3"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 25,
+      "textPath": "./data/matthew-25.json",
+      "hashPath": "./data/matthew-25.sha256.txt",
+      "sha256": "e5806e93affa131ee9f2656b9c99f423f853f0ec23e983abbe29d9e2e6c9b09a"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 26,
+      "textPath": "./data/matthew-26.json",
+      "hashPath": "./data/matthew-26.sha256.txt",
+      "sha256": "d64b9de3b91228e65d5c44375c3123341260a49ab56ee946bf9b47570c8e953b"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 27,
+      "textPath": "./data/matthew-27.json",
+      "hashPath": "./data/matthew-27.sha256.txt",
+      "sha256": "52f7cc3d544feb18a135ee4b534d8864d4568ea2e777fbe6959f237b3d388394"
+    },
+    {
+      "book": "Matthew",
+      "chapter": 28,
+      "textPath": "./data/matthew-28.json",
+      "hashPath": "./data/matthew-28.sha256.txt",
+      "sha256": "67e4ec662eba9f31e7240f6ffdddb77b1554a4f2a8468f48cca616f2e9a8bab9"
+    },
+    {
+      "book": "Mark",
+      "chapter": 1,
+      "textPath": "./data/mark-1.json",
+      "hashPath": "./data/mark-1.sha256.txt",
+      "sha256": "e69b0e5c18f3e19c0c8ffff5b1b06a66f528c509fcb5df8f53381e5e643647a5"
+    },
+    {
+      "book": "Mark",
+      "chapter": 2,
+      "textPath": "./data/mark-2.json",
+      "hashPath": "./data/mark-2.sha256.txt",
+      "sha256": "4d9f914e71c85e7e37479ffab607835356068798432455132cddd77983edcb44"
+    },
+    {
+      "book": "Mark",
+      "chapter": 3,
+      "textPath": "./data/mark-3.json",
+      "hashPath": "./data/mark-3.sha256.txt",
+      "sha256": "01ac3b3414d6a0b661b571d8139a4f87eb3c9adb4ca8cfb91e314318447c814f"
+    },
+    {
+      "book": "Mark",
+      "chapter": 4,
+      "textPath": "./data/mark-4.json",
+      "hashPath": "./data/mark-4.sha256.txt",
+      "sha256": "2e0a5fe5b5998d3107dd9d4619d5fea72163b65f752d5d10a56c631ea94090a0"
+    },
+    {
+      "book": "Mark",
+      "chapter": 5,
+      "textPath": "./data/mark-5.json",
+      "hashPath": "./data/mark-5.sha256.txt",
+      "sha256": "12db52081862ddf87220b2f9669b0761cbd57a03f7b6bab8d7e5c5ef975be946"
+    },
+    {
+      "book": "Mark",
+      "chapter": 6,
+      "textPath": "./data/mark-6.json",
+      "hashPath": "./data/mark-6.sha256.txt",
+      "sha256": "034abb7b55bf665c853985f8cefa0a5eb43c71a2365c1486bf7492b9dab32360"
+    },
+    {
+      "book": "Mark",
+      "chapter": 7,
+      "textPath": "./data/mark-7.json",
+      "hashPath": "./data/mark-7.sha256.txt",
+      "sha256": "4ee0ee2c9e1311c7fa7901d66487b662575be02a4d0a2eecc03a5b3b91c1f1c9"
+    },
+    {
+      "book": "Mark",
+      "chapter": 8,
+      "textPath": "./data/mark-8.json",
+      "hashPath": "./data/mark-8.sha256.txt",
+      "sha256": "1b8874ee2e4b28dfdb1942b2fde34e3e47416048612ab43c6d9c75d3f2358c8e"
+    },
+    {
+      "book": "Mark",
+      "chapter": 9,
+      "textPath": "./data/mark-9.json",
+      "hashPath": "./data/mark-9.sha256.txt",
+      "sha256": "d39cd8350c3bcaf5c316426207637a28edc2c9320032c9b2be6dcc5337827e65"
+    },
+    {
+      "book": "Mark",
+      "chapter": 10,
+      "textPath": "./data/mark-10.json",
+      "hashPath": "./data/mark-10.sha256.txt",
+      "sha256": "c35b8a7690200cb72c95ec5ab198f6e059c32b98033c0f35c587a5c68b2082ba"
+    },
+    {
+      "book": "Mark",
+      "chapter": 11,
+      "textPath": "./data/mark-11.json",
+      "hashPath": "./data/mark-11.sha256.txt",
+      "sha256": "8dbdb6c6bca52bcec5b6fd909357fc9773efcbb777ef44366b936aaa763ff921"
+    },
+    {
+      "book": "Mark",
+      "chapter": 12,
+      "textPath": "./data/mark-12.json",
+      "hashPath": "./data/mark-12.sha256.txt",
+      "sha256": "6a46a61f3bafda09946ef9b507fe0a0741f6ecfe6e8de832f28b902bac1d9186"
+    },
+    {
+      "book": "Mark",
+      "chapter": 13,
+      "textPath": "./data/mark-13.json",
+      "hashPath": "./data/mark-13.sha256.txt",
+      "sha256": "1f7f96417a839acdc4e3d4ec0350e15a238dc31b2c89b436e3fd281b7b04ef7a"
+    },
+    {
+      "book": "Mark",
+      "chapter": 14,
+      "textPath": "./data/mark-14.json",
+      "hashPath": "./data/mark-14.sha256.txt",
+      "sha256": "00862e51a103c3d20b59a86b2f711411c6fd89c8afdb218220ad30fb22d8ad34"
+    },
+    {
+      "book": "Mark",
+      "chapter": 15,
+      "textPath": "./data/mark-15.json",
+      "hashPath": "./data/mark-15.sha256.txt",
+      "sha256": "a1791798726e7657a26baa1d8073b41cba6ea073e06f0d01fceaa9415adf2a30"
+    },
+    {
+      "book": "Mark",
+      "chapter": 16,
+      "textPath": "./data/mark-16.json",
+      "hashPath": "./data/mark-16.sha256.txt",
+      "sha256": "860643b726cb04f041e6a5ac96974b0388ab5290268b73b4a019b663aab93cea"
+    },
+    {
+      "book": "Luke",
+      "chapter": 1,
+      "textPath": "./data/luke-1.json",
+      "hashPath": "./data/luke-1.sha256.txt",
+      "sha256": "a28a03c319530b270372a5f07a81fb286bbd058b5175691ef8461a94723a2e8b"
+    },
+    {
+      "book": "Luke",
+      "chapter": 2,
+      "textPath": "./data/luke-2.json",
+      "hashPath": "./data/luke-2.sha256.txt",
+      "sha256": "2c79e0c1e52a8eaacde8a7f4bc05abd12348c2a73b9622a5a1de2af6ffc51ba1"
+    },
+    {
+      "book": "Luke",
+      "chapter": 3,
+      "textPath": "./data/luke-3.json",
+      "hashPath": "./data/luke-3.sha256.txt",
+      "sha256": "fc74ccbdcf45eb858be0b55819e83a5913331c93959295e281bafcb2df6f9fe3"
+    },
+    {
+      "book": "Luke",
+      "chapter": 4,
+      "textPath": "./data/luke-4.json",
+      "hashPath": "./data/luke-4.sha256.txt",
+      "sha256": "d1c011fe383a85e1b1d665fedb1c2f7e15e5e33459e89f1f7f319a7126fb7a49"
+    },
+    {
+      "book": "Luke",
+      "chapter": 5,
+      "textPath": "./data/luke-5.json",
+      "hashPath": "./data/luke-5.sha256.txt",
+      "sha256": "03d17c824a47a27a9973b379b80595dc88e64baacffd13f0d0c3b7ea0efcccf7"
+    },
+    {
+      "book": "Luke",
+      "chapter": 6,
+      "textPath": "./data/luke-6.json",
+      "hashPath": "./data/luke-6.sha256.txt",
+      "sha256": "2652db26e49d722eaf1d5c287a01bff7df857260dc618d0749d90e1641ae83d3"
+    },
+    {
+      "book": "Luke",
+      "chapter": 7,
+      "textPath": "./data/luke-7.json",
+      "hashPath": "./data/luke-7.sha256.txt",
+      "sha256": "9bcc0da48fed5bc7588a86f723bd1b3f34e6eca3e997edeeb7634774eff940b7"
+    },
+    {
+      "book": "Luke",
+      "chapter": 8,
+      "textPath": "./data/luke-8.json",
+      "hashPath": "./data/luke-8.sha256.txt",
+      "sha256": "2c3bdcce0f5b73e9893acfac441d862fcfb63f9f5e9b1ed872a641416da29c9f"
+    },
+    {
+      "book": "Luke",
+      "chapter": 9,
+      "textPath": "./data/luke-9.json",
+      "hashPath": "./data/luke-9.sha256.txt",
+      "sha256": "4d7e16734cfa122700439dccefdbf0036ebcd472addcb006274a5b115cbe461b"
+    },
+    {
+      "book": "Luke",
+      "chapter": 10,
+      "textPath": "./data/luke-10.json",
+      "hashPath": "./data/luke-10.sha256.txt",
+      "sha256": "4e90f20811af0a2e7a569f077cbfc63ddc887977632f85fe679db8f77e424b2f"
+    },
+    {
+      "book": "Luke",
+      "chapter": 11,
+      "textPath": "./data/luke-11.json",
+      "hashPath": "./data/luke-11.sha256.txt",
+      "sha256": "3f7376be4cf6fc4895d5a0892830873d55b902e5c14188391daf48e429c775b0"
+    },
+    {
+      "book": "Luke",
+      "chapter": 12,
+      "textPath": "./data/luke-12.json",
+      "hashPath": "./data/luke-12.sha256.txt",
+      "sha256": "0c63480e62b05bca50b74a3b1892f13220f8293c1b95e5b80bdbabb3eed3bcc8"
+    },
+    {
+      "book": "Luke",
+      "chapter": 13,
+      "textPath": "./data/luke-13.json",
+      "hashPath": "./data/luke-13.sha256.txt",
+      "sha256": "3e30e990b2b695e597bfed6c27c8bfd84390c0c93501da85686e26899d78b19c"
+    },
+    {
+      "book": "Luke",
+      "chapter": 14,
+      "textPath": "./data/luke-14.json",
+      "hashPath": "./data/luke-14.sha256.txt",
+      "sha256": "0ebf396f6fc0e24b0dc053724c16838bcae8b5afd61c5966dc2e59c78fafc99c"
+    },
+    {
+      "book": "Luke",
+      "chapter": 15,
+      "textPath": "./data/luke-15.json",
+      "hashPath": "./data/luke-15.sha256.txt",
+      "sha256": "d112f053fc513bb618af1e2b6eb4cb669dcd1d975d4f0d5a5ae2248bf0e9e2d6"
+    },
+    {
+      "book": "Luke",
+      "chapter": 16,
+      "textPath": "./data/luke-16.json",
+      "hashPath": "./data/luke-16.sha256.txt",
+      "sha256": "3aad3727ce9815423db7571da8020d30778987c2ab69b9e3273359280198bb3f"
+    },
+    {
+      "book": "Luke",
+      "chapter": 17,
+      "textPath": "./data/luke-17.json",
+      "hashPath": "./data/luke-17.sha256.txt",
+      "sha256": "f489239a920a775a68d87b7b9bbddd6c8c4ac54c0e1570e87e4efbbeeaa6a0f5"
+    },
+    {
+      "book": "Luke",
+      "chapter": 18,
+      "textPath": "./data/luke-18.json",
+      "hashPath": "./data/luke-18.sha256.txt",
+      "sha256": "bbed826a2af125c83501f409fdf6e4d75d132dcd34eb9ddcdaaf34d9f2b91aa8"
+    },
+    {
+      "book": "Luke",
+      "chapter": 19,
+      "textPath": "./data/luke-19.json",
+      "hashPath": "./data/luke-19.sha256.txt",
+      "sha256": "67cb3e9e757925b52e936b11ce7c637ff66cd196cd6c58f05be55f04b882203b"
+    },
+    {
+      "book": "Luke",
+      "chapter": 20,
+      "textPath": "./data/luke-20.json",
+      "hashPath": "./data/luke-20.sha256.txt",
+      "sha256": "816da1f7da1f144d59344a14602dc721bbf01f1776187aca77a8eec5091237d5"
+    },
+    {
+      "book": "Luke",
+      "chapter": 21,
+      "textPath": "./data/luke-21.json",
+      "hashPath": "./data/luke-21.sha256.txt",
+      "sha256": "16dfd1f18250df94446b4113ee2ceb7e171f0b049eb5ce50ca10690da91eb80f"
+    },
+    {
+      "book": "Luke",
+      "chapter": 22,
+      "textPath": "./data/luke-22.json",
+      "hashPath": "./data/luke-22.sha256.txt",
+      "sha256": "81916f260582179608dea7a0cf0f91438b7d8bb6ebd74e82e60d6bb8705cab16"
+    },
+    {
+      "book": "Luke",
+      "chapter": 23,
+      "textPath": "./data/luke-23.json",
+      "hashPath": "./data/luke-23.sha256.txt",
+      "sha256": "d7634f2d8c9500227e91559d37f4d26e39c7139325453398bde0ddbd5e3a0178"
+    },
+    {
+      "book": "Luke",
+      "chapter": 24,
+      "textPath": "./data/luke-24.json",
+      "hashPath": "./data/luke-24.sha256.txt",
+      "sha256": "f21c0dbc0dfec0d623327074246ea7599de97bf1ac8fc61f2d893cb3670600f5"
+    },
+    {
       "book": "John",
       "chapter": 1,
       "textPath": "./data/john-1.json",
@@ -153,6 +629,12 @@
   "source": {
     "provider": "Project Gutenberg",
     "sourceFile": "source/kjv-gutenberg.txt",
-    "importedBook": "John"
+    "importedCollection": "The Four Gospels",
+    "importedBooks": [
+      "Matthew",
+      "Mark",
+      "Luke",
+      "John"
+    ]
   }
 }

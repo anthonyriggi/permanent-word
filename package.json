@@ -10,9 +10,11 @@
     "source:download": "node scripts/download-source.js",
     "source:check": "node scripts/check-source.js",
     "source:import:john": "node scripts/import-gutenberg-john.js",
-    "build:data": "node scripts/build-data.js source/john-gutenberg.json",
+    "source:import:gospels": "node scripts/import-gutenberg-gospels.js",
+    "build:data": "node scripts/build-data.js source/gospels-gutenberg.json",
+    "build:john": "node scripts/build-data.js source/john-gutenberg.json",
     "build:sample": "node scripts/build-data.js source/john-sample.json",
     "check:data": "node scripts/check-data.js",
-    "verify": "npm run source:check && npm run source:import:john && npm run build:data && npm run check:data"
+    "verify": "npm run source:check && npm run source:import:gospels && npm run build:data && npm run check:data"
   }
 }
