@@ -139,7 +139,10 @@ function checkChapter(chapterEntry, index) {
     if (!chapter.translation) fail(`${label}: translation is missing`);
     if (!chapter.book) fail(`${label}: book is missing`);
     if (!chapter.chapter) fail(`${label}: chapter is missing`);
-    if (!chapter.heading) fail(`${label}: heading is missing`);
+
+    if (typeof chapter.heading !== "string") {
+      fail(`${label}: heading should be a string, even if empty`);
+    }
 
     if (!Array.isArray(chapter.verses)) {
       fail(`${label}: verses must be an array`);

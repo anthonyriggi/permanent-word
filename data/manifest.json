@@ -7,35 +7,152 @@
       "chapter": 1,
       "textPath": "./data/john-1.json",
       "hashPath": "./data/john-1.sha256.txt",
-      "sha256": "eea48efd1ad4ce4552c253d93bb7af72de74e4f063e1af1d382c6746572d4dac"
+      "sha256": "26695d7cf02806b177b9e7896d447b4506f1629758468c8d352d829b8018f959"
     },
     {
       "book": "John",
       "chapter": 2,
       "textPath": "./data/john-2.json",
       "hashPath": "./data/john-2.sha256.txt",
-      "sha256": "62b2cd620523f064ce57edb21adacd5bde7ef853a1159c884797f897863f99fa"
+      "sha256": "c4573cf92185a20e73e9e2640e79ae2073428619fed0b0a7ba1f1ca213113a3f"
     },
     {
       "book": "John",
       "chapter": 3,
       "textPath": "./data/john-3.json",
       "hashPath": "./data/john-3.sha256.txt",
-      "sha256": "ad11f8e51aa2020f872ba47ab1a85af14bb7c06628c2eaa66ed320f47e0365de"
+      "sha256": "702193a17d311081456e1ff253ee1751fcfb5af05067802686e8d2568a26c5c0"
     },
     {
       "book": "John",
       "chapter": 4,
       "textPath": "./data/john-4.json",
       "hashPath": "./data/john-4.sha256.txt",
-      "sha256": "6cecdfed11b2992cdc9aa41a53120fec4979c41069ee5e7b35c1e251809c4634"
+      "sha256": "2e49dba13747553a418ebeee469a9c56a48f3af3528b9eb5971aac4041d1539b"
     },
     {
       "book": "John",
       "chapter": 5,
       "textPath": "./data/john-5.json",
       "hashPath": "./data/john-5.sha256.txt",
-      "sha256": "20f70259cb70a27cda058e2e15859cccbda7d2f090697d78e5a373200b186620"
+      "sha256": "b05ff22f78ce05e42b6540eb8dbcfa72f76db1f5adf45304dd70ded5621e6214"
+    },
+    {
+      "book": "John",
+      "chapter": 6,
+      "textPath": "./data/john-6.json",
+      "hashPath": "./data/john-6.sha256.txt",
+      "sha256": "2b4578d10b86523bdb240446082308527e1599261f993166b6149a10acb4d189"
+    },
+    {
+      "book": "John",
+      "chapter": 7,
+      "textPath": "./data/john-7.json",
+      "hashPath": "./data/john-7.sha256.txt",
+      "sha256": "80226730d75f80b9576e55d0aae6b3c7d57ef126bb77e5574785570eb2ba5a63"
+    },
+    {
+      "book": "John",
+      "chapter": 8,
+      "textPath": "./data/john-8.json",
+      "hashPath": "./data/john-8.sha256.txt",
+      "sha256": "6f333b9b2c0fcf02193134c19983166d9b5f5188461962747bf7ec946ea0ee6b"
+    },
+    {
+      "book": "John",
+      "chapter": 9,
+      "textPath": "./data/john-9.json",
+      "hashPath": "./data/john-9.sha256.txt",
+      "sha256": "90102e6557fc03fa6fcea3cbf5d579d6341092d22799bce589b4a2ec4b0cf89f"
+    },
+    {
+      "book": "John",
+      "chapter": 10,
+      "textPath": "./data/john-10.json",
+      "hashPath": "./data/john-10.sha256.txt",
+      "sha256": "ce30f43c167a1f6c76612490ae7922b59533d87cb23ad79c2fb105906a938623"
+    },
+    {
+      "book": "John",
+      "chapter": 11,
+      "textPath": "./data/john-11.json",
+      "hashPath": "./data/john-11.sha256.txt",
+      "sha256": "510549a140cab55d32c0e18b0028464ab796ded48a22afc6b612e20c41020672"
+    },
+    {
+      "book": "John",
+      "chapter": 12,
+      "textPath": "./data/john-12.json",
+      "hashPath": "./data/john-12.sha256.txt",
+      "sha256": "c133f65aa69f74c48dc0b2ed68f3e573c03eb418637600ac8e897b421576dfc5"
+    },
+    {
+      "book": "John",
+      "chapter": 13,
+      "textPath": "./data/john-13.json",
+      "hashPath": "./data/john-13.sha256.txt",
+      "sha256": "8d6c452a48210b39c455d558074152361e16dc1692ffbe3e724e3a48a52da788"
+    },
+    {
+      "book": "John",
+      "chapter": 14,
+      "textPath": "./data/john-14.json",
+      "hashPath": "./data/john-14.sha256.txt",
+      "sha256": "ed85e0fdc3c42ae565fac9b38a11238124a6035693a3ac4102f73704cd66e71e"
+    },
+    {
+      "book": "John",
+      "chapter": 15,
+      "textPath": "./data/john-15.json",
+      "hashPath": "./data/john-15.sha256.txt",
+      "sha256": "6842ed3a55b1dc2e5d5e8c67a08a80358e8b6831d395fa4f3ad06b6d9db2af4f"
+    },
+    {
+      "book": "John",
+      "chapter": 16,
+      "textPath": "./data/john-16.json",
+      "hashPath": "./data/john-16.sha256.txt",
+      "sha256": "5db03e7c9d0a4db6598c30b155a97ec6211af3e1048b07c10fc3615cc94ea76a"
+    },
+    {
+      "book": "John",
+      "chapter": 17,
+      "textPath": "./data/john-17.json",
+      "hashPath": "./data/john-17.sha256.txt",
+      "sha256": "ab039934c20de1cdec4d3d4e2a352b484ad371fdf629cc92da51b3656b02828f"
+    },
+    {
+      "book": "John",
+      "chapter": 18,
+      "textPath": "./data/john-18.json",
+      "hashPath": "./data/john-18.sha256.txt",
+      "sha256": "74aa036eb341b5f5d978bd99c367cbba77b457a14697fc1dea5175cd301e5456"
+    },
+    {
+      "book": "John",
+      "chapter": 19,
+      "textPath": "./data/john-19.json",
+      "hashPath": "./data/john-19.sha256.txt",
+      "sha256": "58906a105520c041d666cfb9be6f90df8b4bb7d67f6937760568ba9390e5bef3"
+    },
+    {
+      "book": "John",
+      "chapter": 20,
+      "textPath": "./data/john-20.json",
+      "hashPath": "./data/john-20.sha256.txt",
+      "sha256": "93b9fc70587dea76c3a919462c6ccc449e72469b495d251e7235cb56c37d8fb1"
+    },
+    {
+      "book": "John",
+      "chapter": 21,
+      "textPath": "./data/john-21.json",
+      "hashPath": "./data/john-21.sha256.txt",
+      "sha256": "21f69cbd1f2b8dfa7cb5d7b4137a4241cdee3acf147fa41b7841f7bf008e2b00"
     }
-  ]
+  ],
+  "source": {
+    "provider": "Project Gutenberg",
+    "sourceFile": "source/kjv-gutenberg.txt",
+    "importedBook": "John"
+  }
 }

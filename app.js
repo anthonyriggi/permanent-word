@@ -136,7 +136,9 @@ async function renderCurrentChapter() {
   document.title = `${chapter.book} ${chapter.chapter} | ${manifest.title}`;
   bookLabel.textContent = `${chapter.book} ${chapter.chapter}`.toUpperCase();
   chapterSelect.value = String(currentChapterIndex);
+
   chapterTitle.textContent = chapter.heading || "";
+  chapterTitle.hidden = !chapter.heading;
 
   scriptureText.innerHTML = chapter.verses
     .map((verse) => {
