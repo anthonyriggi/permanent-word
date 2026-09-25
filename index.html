@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="A lightweight, verifiable Scripture reader." />
     <title>Permanent Word</title>
-    <link rel="stylesheet" href="./styles.css?v=3" />
+    <link rel="stylesheet" href="./styles.css?v=4" />
   </head>
 
   <body>
@@ -85,6 +85,26 @@
               <dd><code id="sourceFile">—</code></dd>
             </div>
           </dl>
+        </section>
+
+        <section class="method-card" aria-label="About this reader">
+          <details class="method-details">
+            <summary>About / Method</summary>
+
+            <div class="method-content">
+              <p>
+                Permanent Word is a static KJV New Testament reader generated from a tracked Project Gutenberg source file.
+              </p>
+
+              <p>
+                Each chapter is stored as plain JSON and verified with SHA-256 hashes in the browser.
+              </p>
+
+              <p>
+                Verification means the loaded chapter matches the generated canonical file for this project. It does not independently prove the original source is perfect; it proves this local text has not changed from the tracked version.
+              </p>
+            </div>
+          </details>
         </section>
       </article>
 
