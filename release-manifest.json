@@ -23,8 +23,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 8486,
-      "sha256": "edd2939d46516da9b12cc08b1ee7381e296be3cfe398ee3679f5a0859e1b9b36"
+      "bytes": 10655,
+      "sha256": "27dc57231624acd457a75afaf669ffa9a52eeec88ea746c83607c430c68b35d9"
     },
     {
       "path": "data/1-chronicles-1.json",
@@ -11933,13 +11933,13 @@
     },
     {
       "path": "package.json",
-      "bytes": 1337,
-      "sha256": "061d76fb58f50afc31d2f7e2da24bb9a62c342520cc68f731890ba9828156bd0"
+      "bytes": 1425,
+      "sha256": "4ebd2179904e8a912f44faeb3d79abb20d045a0ad9b6ffe1a2b969cd654578c4"
     },
     {
       "path": "README.md",
-      "bytes": 6715,
-      "sha256": "dadfdf4997f17d7fe3255b3087080343c232e0eea9e213b71834031c494a51e2"
+      "bytes": 7862,
+      "sha256": "6c1f7f5ad125afef13602a42c6f979cce491b787ff63052d219a70c23d58ba05"
     },
     {
       "path": "scripts/build-data.js",
@@ -11955,6 +11955,11 @@
       "path": "scripts/check-data.js",
       "bytes": 5244,
       "sha256": "1e275fc1b72b5b0123bf83e9d118b9fa303c8a832ef55a583decc07c220440cd"
+    },
+    {
+      "path": "scripts/check-release-manifest.js",
+      "bytes": 4532,
+      "sha256": "5f9b3cfc6c4b5efb633c335c8dfa3320c58d68682e9a1efa51338410791c8eb5"
     },
     {
       "path": "scripts/check-source.js",
@@ -11988,8 +11993,8 @@
     },
     {
       "path": "source.md",
-      "bytes": 4401,
-      "sha256": "be93b054ef0c5a5fc853770b6557f76686fe4398bbca44fa340030366dc104e9"
+      "bytes": 5294,
+      "sha256": "11d5ed2829bb00817445dfbaf8ac636dbfbf0a7e2525d3e29551db01845ceef5"
     },
     {
       "path": "source/full-bible-gutenberg.json",
