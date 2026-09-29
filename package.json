@@ -19,8 +19,10 @@
     "build:john": "node scripts/build-data.js source/john-gutenberg.json",
     "build:sample": "node scripts/build-data.js source/john-sample.json",
     "build:release": "node scripts/build-release-manifest.js",
+    "build:bundle": "npm run verify && node scripts/build-release-bundle.js && npm run check:bundle",
     "check:data": "node scripts/check-data.js",
     "check:release": "node scripts/check-release-manifest.js",
+    "check:bundle": "node scripts/check-release-bundle.js",
     "verify": "npm run source:check && npm run source:import:full && npm run build:data && npm run check:data && npm run build:release && npm run check:release"
   }
 }

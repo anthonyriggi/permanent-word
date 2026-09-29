@@ -12,6 +12,11 @@
   },
   "files": [
     {
+      "path": ".gitignore",
+      "bytes": 29,
+      "sha256": "26e9d2c1a5a5093c53145d8f11f327bd28efca847fb8a669338e2c4f56a2157f"
+    },
+    {
       "path": ".nojekyll",
       "bytes": 0,
       "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
@@ -11933,8 +11938,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 1425,
-      "sha256": "4ebd2179904e8a912f44faeb3d79abb20d045a0ad9b6ffe1a2b969cd654578c4"
+      "bytes": 1587,
+      "sha256": "e5fb945b4bb213de64d5188e27fc030dcd77f5134b3b8f90b2846c89da1c0c66"
     },
     {
       "path": "README.md",
@@ -11952,14 +11957,24 @@
       "sha256": "c1e24472be5f8c9ed7efdce5c30d0b3186f9063b091ab688a3c67d150736e903"
     },
     {
+      "path": "scripts/build-release-bundle.js",
+      "bytes": 3478,
+      "sha256": "0ccb5c5fd85d1b5a1662ea97789cfd4bdb2766a8a7e0f2d23446b0761665edfb"
+    },
+    {
       "path": "scripts/build-release-manifest.js",
-      "bytes": 3514,
-      "sha256": "7c3ee3623f36cdb004a5dd65406375edfe12e343ac3a854ccce85a76d323bb7b"
+      "bytes": 3539,
+      "sha256": "de47b66da72b4fa076b65795904ef726e1b9ae8fdae9a0513156fdfe5a811d75"
     },
     {
       "path": "scripts/check-data.js",
       "bytes": 5244,
       "sha256": "1e275fc1b72b5b0123bf83e9d118b9fa303c8a832ef55a583decc07c220440cd"
+    },
+    {
+      "path": "scripts/check-release-bundle.js",
+      "bytes": 1823,
+      "sha256": "46071a9a9d917d6e2a2f26e9f62bdaaf18084f94f72894148e8daca4aed1bb17"
     },
     {
       "path": "scripts/check-release-manifest.js",

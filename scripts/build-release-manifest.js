@@ -9,10 +9,12 @@ const RELEASE_MANIFEST_HASH_PATH = path.join(ROOT_DIR, "release-manifest.sha256.
 
 const EXCLUDED_DIRS = new Set([
   ".git",
-  "node_modules"
+  "node_modules",
+  "dist"
 ]);
 
 const EXCLUDED_FILES = new Set([
+  ".DS_Store",
   "release-manifest.json",
   "release-manifest.sha256.txt"
 ]);
