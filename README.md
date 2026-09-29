@@ -9,6 +9,27 @@ No backend.
 No database.  
 No build step for the reader.
 
+## Live deployment
+
+The current static deployment is available here:
+
+```text
+https://anthonyriggi.github.io/permanent-word/
+```
+
+Example deployed chapter URLs:
+
+```text
+https://anthonyriggi.github.io/permanent-word/#genesis-1
+https://anthonyriggi.github.io/permanent-word/#psalms-23
+https://anthonyriggi.github.io/permanent-word/#isaiah-53
+https://anthonyriggi.github.io/permanent-word/#matthew-5
+https://anthonyriggi.github.io/permanent-word/#romans-8
+https://anthonyriggi.github.io/permanent-word/#revelation-21
+```
+
+The deployed site is served as static files through GitHub Pages.
+
 ## Current status
 
 Permanent Word currently supports:
@@ -22,8 +43,9 @@ Permanent Word currently supports:
 - Stable chapter URLs
 - Browser-based SHA-256 verification
 - Terminal-based source and data verification
+- Static deployment through GitHub Pages
 
-Example chapter URLs:
+Example local chapter URLs:
 
 ```text
 http://localhost:5500/#genesis-1
@@ -172,6 +194,7 @@ npm run start
 ├── README.md
 ├── SOURCE.md
 ├── ARCHITECTURE.md
+├── .nojekyll
 ├── data/
 │   ├── manifest.json
 │   ├── manifest.sha256.txt
@@ -221,6 +244,25 @@ The manifest itself also has a hash:
 data/manifest.sha256.txt
 ```
 
+## Static deployment notes
+
+This project can be deployed as a plain static site.
+
+The current GitHub Pages deployment publishes from the repository root. The `.nojekyll` file is included so GitHub Pages serves the project as plain static files without Jekyll processing.
+
+After deployment, test:
+
+```text
+/deployed-url/#genesis-1
+/deployed-url/#psalms-23
+/deployed-url/#isaiah-53
+/deployed-url/#john-3
+/deployed-url/#revelation-21
+/deployed-url/data/manifest.json
+```
+
+The browser verification panel should still show that the loaded chapter and manifest are verified.
+
 ## Headings
 
 The imported Gutenberg source does not include modern editorial section headings.
@@ -247,7 +289,6 @@ See `SOURCE.md` for more detail.
 
 Possible next steps:
 
-- Test static deployment outside localhost
 - Add IPFS / Arweave publishing workflow
 - Add decentralized hash anchoring
 - Improve source metadata display
