@@ -48,6 +48,8 @@ Project Gutenberg KJV text
 → data/*.sha256.txt
 → data/manifest.json
 → data/manifest.sha256.txt
+→ release-manifest.json
+→ release-manifest.sha256.txt
 ```
 
 ## Downloading the source
@@ -165,7 +167,7 @@ data/psalms-23.sha256.txt
 
 ## Manifest
 
-The generated manifest is:
+The generated data manifest is:
 
 ```text
 data/manifest.json
@@ -187,6 +189,39 @@ The manifest hash is stored here:
 data/manifest.sha256.txt
 ```
 
+## Release manifest
+
+The generated release manifest is:
+
+```text
+release-manifest.json
+```
+
+Its SHA-256 hash is stored here:
+
+```text
+release-manifest.sha256.txt
+```
+
+The release manifest records the current static project package by listing each included file with:
+
+- File path
+- File size in bytes
+- SHA-256 hash
+
+This release-level manifest is intended to support future IPFS, Arweave, or blockchain anchoring workflows.
+
+The release manifest excludes:
+
+```text
+.git/
+node_modules/
+release-manifest.json
+release-manifest.sha256.txt
+```
+
+The release manifest excludes itself and its own hash so that it can be generated deterministically from the rest of the project files.
+
 ## Full verification
 
 Run:
@@ -195,19 +230,21 @@ Run:
 npm run verify
 ```
 
-This performs the full source-to-reader workflow:
+This performs the full source-to-release workflow:
 
 ```text
 1. Verify source/kjv-gutenberg.txt
 2. Import the full Bible
 3. Build chapter data
 4. Verify generated data
+5. Build the release manifest
 ```
 
-Expected final result:
+Expected final result includes:
 
 ```text
 ✅ All integrity checks passed.
+Release manifest generated.
 ```
 
 ## What is treated as canonical?
@@ -223,6 +260,7 @@ The following are treated as application metadata:
 - Empty heading fields
 - Source information display
 - Verification UI copy
+- Release manifest summary fields
 
 ## Headings
 
@@ -253,6 +291,8 @@ data/*.json
 data/*.sha256.txt
 data/manifest.json
 data/manifest.sha256.txt
+release-manifest.json
+release-manifest.sha256.txt
 ```
 
 ## Copyright and public-domain note
