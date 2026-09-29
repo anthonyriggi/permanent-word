@@ -530,3 +530,60 @@ code {
     padding: 16px 18px 18px;
   }
 }
+
+.pw-loading-card {
+  box-sizing: border-box;
+  width: min(100%, 520px);
+  margin: 0 auto;
+  padding: 40px 32px;
+  border: 1px solid rgba(20, 20, 20, 0.08);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: 0 24px 70px rgba(20, 20, 20, 0.08);
+  text-align: center;
+}
+
+.pw-loading-spinner {
+  width: 34px;
+  height: 34px;
+  margin: 0 auto 22px;
+  border: 3px solid rgba(20, 20, 20, 0.12);
+  border-top-color: rgba(20, 20, 20, 0.72);
+  border-radius: 999px;
+  animation: pw-loading-spin 0.9s linear infinite;
+}
+
+.pw-loading-eyebrow {
+  margin: 0 0 10px;
+  color: #7b828c;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.pw-loading-title {
+  margin: 0;
+  color: #181818;
+  font-size: clamp(1.65rem, 4vw, 2.25rem);
+  font-weight: 850;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+}
+
+.pw-loading-copy {
+  max-width: 380px;
+  margin: 16px auto 0;
+  color: #68707a;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.6;
+}
+
+@keyframes pw-loading-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

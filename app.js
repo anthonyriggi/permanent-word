@@ -160,13 +160,18 @@ function renderLoadingState(message) {
   document.title = "Loading | Permanent Word";
 
   bookLabel.textContent = "LOADING";
-  chapterTitle.textContent = "Loading verified Bible bundle";
-  chapterTitle.hidden = false;
+  chapterTitle.textContent = "";
+  chapterTitle.hidden = true;
 
   scriptureText.innerHTML = `
-    <p class="verse">
-      Loading Permanent Word. This may take a few seconds on decentralized gateways.
-    </p>
+    <div class="pw-loading-card" role="status" aria-live="polite">
+      <div class="pw-loading-spinner" aria-hidden="true"></div>
+      <p class="pw-loading-eyebrow">Preparing verified text</p>
+      <h2 class="pw-loading-title">Loading Scripture</h2>
+      <p class="pw-loading-copy">
+        Verifying the Bible bundle. This may take a few seconds on decentralized gateways.
+      </p>
+    </div>
   `;
 
   verifyStatus.textContent = "Checking text...";
