@@ -2,7 +2,7 @@
 
 Permanent Word is a lightweight, static Scripture reader with local text integrity verification.
 
-The current version imports the **full KJV Bible** from a tracked Project Gutenberg source file, generates one JSON file per chapter, and verifies the text using SHA-256 hashes.
+The current version imports the **full KJV Bible** from a tracked Project Gutenberg source file, generates one JSON file per chapter, verifies the text using SHA-256 hashes, and generates a release manifest for the entire static app.
 
 No framework.  
 No backend.  
@@ -44,6 +44,7 @@ Permanent Word currently supports:
 - Browser-based SHA-256 verification
 - Terminal-based source and data verification
 - Static deployment through GitHub Pages
+- Release-level manifest generation
 
 Example local chapter URLs:
 
@@ -84,12 +85,14 @@ Project Gutenberg KJV source text
 → data/*.sha256.txt chapter hash files
 → data/manifest.json
 → data/manifest.sha256.txt
+→ release-manifest.json
+→ release-manifest.sha256.txt
 → static browser reader
 ```
 
 The reader loads `data/manifest.json`, loads the selected chapter file, computes its SHA-256 hash in the browser, and compares that hash against the canonical hash stored in the manifest.
 
-The terminal verification script also checks the same data files.
+The terminal verification script also checks the same data files and generates a release manifest for the full static project.
 
 ## Getting started
 
@@ -122,12 +125,14 @@ This command does the full verification workflow:
 2. Import the full Bible from the source text
 3. Generate chapter JSON files
 4. Generate chapter SHA-256 files
-5. Generate the manifest
-6. Generate the manifest hash
+5. Generate the data manifest
+6. Generate the data manifest hash
 7. Verify all generated data
+8. Generate the release manifest
+9. Generate the release manifest hash
 ```
 
-Expected final result:
+Expected final result includes:
 
 ```text
 Imported the full Bible from Gutenberg source.
@@ -137,6 +142,7 @@ Verses: 31102
 Permanent Word data generated.
 Chapters: 1189
 ✅ All integrity checks passed.
+Release manifest generated.
 ```
 
 ## Useful commands
@@ -171,6 +177,12 @@ Verify generated reader data:
 npm run check:data
 ```
 
+Build the release manifest:
+
+```bash
+npm run build:release
+```
+
 Run the full source-to-reader verification:
 
 ```bash
@@ -195,6 +207,8 @@ npm run start
 ├── SOURCE.md
 ├── ARCHITECTURE.md
 ├── .nojekyll
+├── release-manifest.json
+├── release-manifest.sha256.txt
 ├── data/
 │   ├── manifest.json
 │   ├── manifest.sha256.txt
@@ -215,7 +229,8 @@ npm run start
     ├── import-gutenberg-gospels.js
     ├── import-gutenberg-john.js
     ├── build-data.js
-    └── check-data.js
+    ├── check-data.js
+    └── build-release-manifest.js
 ```
 
 ## Data files
@@ -244,6 +259,31 @@ The manifest itself also has a hash:
 data/manifest.sha256.txt
 ```
 
+## Release manifest
+
+The release manifest records the files included in the current static release.
+
+Generated files:
+
+```text
+release-manifest.json
+release-manifest.sha256.txt
+```
+
+The release manifest lists each included file with:
+
+- File path
+- File size in bytes
+- SHA-256 hash
+
+This creates a higher-level proof for the whole project release.
+
+The chapter hashes prove individual chapter text files.  
+The data manifest proves the chapter collection.  
+The release manifest proves the full static app package.
+
+This is useful before publishing to IPFS, Arweave, or any other long-term storage system.
+
 ## Static deployment notes
 
 This project can be deployed as a plain static site.
@@ -259,6 +299,7 @@ After deployment, test:
 /deployed-url/#john-3
 /deployed-url/#revelation-21
 /deployed-url/data/manifest.json
+/deployed-url/release-manifest.json
 ```
 
 The browser verification panel should still show that the loaded chapter and manifest are verified.
