@@ -1,16 +1,29 @@
 // Permanent Word
+
 // No framework. No backend. No build step.
-// Chapters are loaded from data/manifest.json.
+
+// Normal mode loads chapters from data/manifest.json.
+// Compact publish mode loads chapters from data/bible.json.
 
 const MANIFEST_PATH = "./data/manifest.json";
 const MANIFEST_HASH_PATH = "./data/manifest.sha256.txt";
 
 let manifest = null;
 let rawManifest = "";
+
 let manifestVerification = {
   currentHash: "",
   canonicalHash: "",
   verified: false
+};
+
+let bibleBundle = null;
+let bibleBundleVerification = {
+  path: "",
+  currentHash: "",
+  canonicalHash: "",
+  verified: false,
+  loaded: false
 };
 
 let currentChapterIndex = 0;
@@ -51,6 +64,10 @@ function chapterEntryToSlug(chapterEntry) {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
+}
+
+function normalizeBundlePath(value) {
+  return String(value || "").replace(/^\.\//, "");
 }
 
 function getHashSlug() {
@@ -140,6 +157,75 @@ async function verifyManifest() {
   };
 }
 
+function getCompactBundleInfo() {
+  const source = manifest.source || {};
+
+  if (source.publishFormat !== "compact-bundle") {
+    return null;
+  }
+
+  if (!source.bundlePath) {
+    return null;
+  }
+
+  return {
+    bundlePath: source.bundlePath,
+    bundleHashPath: source.bundleHashPath || ""
+  };
+}
+
+function isCompactBundleMode() {
+  return Boolean(getCompactBundleInfo());
+}
+
+function getRawChapterFromBundle(textPath) {
+  if (!bibleBundle || !bibleBundle.chaptersByPath) {
+    throw new Error("Bible bundle is not loaded.");
+  }
+
+  const normalizedPath = normalizeBundlePath(textPath);
+  const possiblePaths = [
+    textPath,
+    normalizedPath,
+    `./${normalizedPath}`
+  ];
+
+  for (const possiblePath of possiblePaths) {
+    if (Object.prototype.hasOwnProperty.call(bibleBundle.chaptersByPath, possiblePath)) {
+      return bibleBundle.chaptersByPath[possiblePath];
+    }
+  }
+
+  throw new Error(`Chapter not found in compact Bible bundle: ${textPath}`);
+}
+
+async function loadBibleBundleIfNeeded() {
+  const bundleInfo = getCompactBundleInfo();
+
+  if (!bundleInfo) {
+    return;
+  }
+
+  const rawBundle = await loadTextFile(bundleInfo.bundlePath);
+  const parsedBundle = JSON.parse(rawBundle);
+  const currentHash = await sha256(rawBundle);
+
+  let canonicalHash = "";
+
+  if (bundleInfo.bundleHashPath) {
+    canonicalHash = (await loadTextFile(bundleInfo.bundleHashPath)).trim();
+  }
+
+  bibleBundle = parsedBundle;
+  bibleBundleVerification = {
+    path: bundleInfo.bundlePath,
+    currentHash,
+    canonicalHash,
+    verified: Boolean(canonicalHash) && currentHash === canonicalHash,
+    loaded: true
+  };
+}
+
 async function loadChapterByIndex(index) {
   const chapterEntry = manifest.chapters[index];
 
@@ -147,7 +233,10 @@ async function loadChapterByIndex(index) {
     return chapterCache.get(chapterEntry.textPath);
   }
 
-  const rawChapter = await loadTextFile(chapterEntry.textPath);
+  const rawChapter = isCompactBundleMode()
+    ? getRawChapterFromBundle(chapterEntry.textPath)
+    : await loadTextFile(chapterEntry.textPath);
+
   const chapter = JSON.parse(rawChapter);
 
   const chapterData = {
@@ -270,7 +359,10 @@ async function renderCurrentChapter() {
 async function verifyCurrentChapter(chapterData) {
   try {
     const currentHash = await sha256(chapterData.raw);
-    const fileCanonicalHash = await loadCanonicalHash(chapterData.entry.hashPath);
+    const fileCanonicalHash = isCompactBundleMode()
+      ? ""
+      : await loadCanonicalHash(chapterData.entry.hashPath);
+
     const manifestCanonicalHash = chapterData.entry.sha256 || "";
     const canonicalHash = manifestCanonicalHash || fileCanonicalHash;
 
@@ -287,6 +379,14 @@ async function verifyCurrentChapter(chapterData) {
       return;
     }
 
+    if (isCompactBundleMode() && !bibleBundleVerification.verified) {
+      verifyStatus.textContent = "Bundle changed";
+      verifyStatus.classList.add("is-error");
+      verificationMessage.textContent =
+        "The compact Bible bundle does not match its canonical SHA-256 hash. Run the publish folder generator again.";
+      return;
+    }
+
     if (!canonicalHash) {
       verifyStatus.textContent = "Hash generated";
       verifyStatus.classList.add("is-warning");
@@ -298,13 +398,19 @@ async function verifyCurrentChapter(chapterData) {
     if (currentHash === canonicalHash) {
       verifyStatus.textContent = "Verified unchanged text";
       verifyStatus.classList.add("is-verified");
-      verificationMessage.textContent =
-        `Chapter verified. Manifest verified. Collection chapters: ${manifest.chapters.length}.`;
+
+      if (isCompactBundleMode()) {
+        verificationMessage.textContent =
+          `Chapter verified. Manifest verified. Compact Bible bundle verified. Collection chapters: ${manifest.chapters.length}.`;
+      } else {
+        verificationMessage.textContent =
+          `Chapter verified. Manifest verified. Collection chapters: ${manifest.chapters.length}.`;
+      }
     } else {
       verifyStatus.textContent = "Text does not match";
       verifyStatus.classList.add("is-error");
       verificationMessage.textContent =
-        "The loaded chapter file does not match the canonical SHA-256 hash. Something changed.";
+        "The loaded chapter text does not match the canonical SHA-256 hash. Something changed.";
     }
   } catch (error) {
     verifyStatus.textContent = "Verification unavailable";
@@ -353,6 +459,7 @@ async function init() {
   try {
     await loadManifest();
     await verifyManifest();
+    await loadBibleBundleIfNeeded();
     populateBookSelect();
     setInitialChapterFromUrl();
     renderSourceInfo();
@@ -361,7 +468,7 @@ async function init() {
     verifyStatus.textContent = "Could not load text";
     verifyStatus.className = "verify-pill is-error";
     verificationMessage.textContent =
-      "The manifest, manifest hash, or chapter file could not be loaded. Confirm data/manifest.json and data/manifest.sha256.txt exist.";
+      "The manifest, manifest hash, chapter file, or compact Bible bundle could not be loaded. Confirm the data files exist.";
     currentHashEl.textContent = "Unavailable";
     canonicalHashEl.textContent = "Unavailable";
   }

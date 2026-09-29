@@ -23,8 +23,8 @@
     },
     {
       "path": "app.js",
-      "bytes": 11786,
-      "sha256": "b52ad9d1aea7daa047b591eb5336b9f9b35a8087595ec5972e5d0f66caf8716c"
+      "bytes": 14444,
+      "sha256": "a80b2a5bc70ebb1c80b49a51aa38ae63ca2198feaaf593a1f4cf977ff9c7cf0d"
     },
     {
       "path": "ARCHITECTURE.md",
@@ -11958,8 +11958,8 @@
     },
     {
       "path": "scripts/build-publish-folder.js",
-      "bytes": 2982,
-      "sha256": "4ed9a37263b260d53fd155be30ca38fff9a6b60053467f31335a79904c157ffb"
+      "bytes": 10135,
+      "sha256": "6d03af590c166ecc57f263590b62aceb36171c5c941273f576f4ce5e61d92687"
     },
     {
       "path": "scripts/build-release-bundle.js",
