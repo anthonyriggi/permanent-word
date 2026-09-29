@@ -2,7 +2,7 @@
 
 Permanent Word is a lightweight, static Scripture reader with local text integrity verification.
 
-The current version imports the **full KJV Bible** from a tracked Project Gutenberg source file, generates one JSON file per chapter, verifies the text using SHA-256 hashes, and generates a release manifest for the entire static app.
+The current version imports the **full KJV Bible** from a tracked Project Gutenberg source file, generates one JSON file per chapter, verifies the text using SHA-256 hashes, and generates/verifies a release manifest for the entire static app.
 
 No framework.  
 No backend.  
@@ -45,6 +45,7 @@ Permanent Word currently supports:
 - Terminal-based source and data verification
 - Static deployment through GitHub Pages
 - Release-level manifest generation
+- Release-level manifest verification
 
 Example local chapter URLs:
 
@@ -92,7 +93,7 @@ Project Gutenberg KJV source text
 
 The reader loads `data/manifest.json`, loads the selected chapter file, computes its SHA-256 hash in the browser, and compares that hash against the canonical hash stored in the manifest.
 
-The terminal verification script also checks the same data files and generates a release manifest for the full static project.
+The terminal verification scripts check the source file, generated chapter data, data manifest, release manifest, and all files listed in the release manifest.
 
 ## Getting started
 
@@ -130,6 +131,8 @@ This command does the full verification workflow:
 7. Verify all generated data
 8. Generate the release manifest
 9. Generate the release manifest hash
+10. Verify the release manifest
+11. Verify every file listed in the release manifest
 ```
 
 Expected final result includes:
@@ -143,6 +146,7 @@ Permanent Word data generated.
 Chapters: 1189
 ✅ All integrity checks passed.
 Release manifest generated.
+✅ Release manifest check passed.
 ```
 
 ## Useful commands
@@ -183,7 +187,13 @@ Build the release manifest:
 npm run build:release
 ```
 
-Run the full source-to-reader verification:
+Verify the release manifest:
+
+```bash
+npm run check:release
+```
+
+Run the full source-to-release verification:
 
 ```bash
 npm run verify
@@ -230,7 +240,8 @@ npm run start
     ├── import-gutenberg-john.js
     ├── build-data.js
     ├── check-data.js
-    └── build-release-manifest.js
+    ├── build-release-manifest.js
+    └── check-release-manifest.js
 ```
 
 ## Data files
@@ -281,6 +292,21 @@ This creates a higher-level proof for the whole project release.
 The chapter hashes prove individual chapter text files.  
 The data manifest proves the chapter collection.  
 The release manifest proves the full static app package.
+
+The release manifest can also be checked later:
+
+```bash
+npm run check:release
+```
+
+This verifies that:
+
+- `release-manifest.json` matches `release-manifest.sha256.txt`
+- every listed file still exists
+- every listed file still has the expected byte size
+- every listed file still has the expected SHA-256 hash
+
+If any listed file changes after the release manifest is generated, `npm run check:release` should fail.
 
 This is useful before publishing to IPFS, Arweave, or any other long-term storage system.
 

@@ -209,7 +209,7 @@ The release manifest records the current static project package by listing each 
 - File size in bytes
 - SHA-256 hash
 
-This release-level manifest is intended to support future IPFS, Arweave, or blockchain anchoring workflows.
+This release-level manifest is intended to support future IPFS, Arweave, signed release, or blockchain anchoring workflows.
 
 The release manifest excludes:
 
@@ -221,6 +221,36 @@ release-manifest.sha256.txt
 ```
 
 The release manifest excludes itself and its own hash so that it can be generated deterministically from the rest of the project files.
+
+## Checking the release manifest
+
+Run:
+
+```bash
+npm run check:release
+```
+
+This verifies that:
+
+```text
+release-manifest.json
+```
+
+matches:
+
+```text
+release-manifest.sha256.txt
+```
+
+It also checks every file listed in the release manifest.
+
+For every listed file, it verifies:
+
+- The file still exists
+- The byte count still matches
+- The SHA-256 hash still matches
+
+If any listed file changes after the release manifest is generated, the release manifest check should fail.
 
 ## Full verification
 
@@ -238,6 +268,7 @@ This performs the full source-to-release workflow:
 3. Build chapter data
 4. Verify generated data
 5. Build the release manifest
+6. Verify the release manifest
 ```
 
 Expected final result includes:
@@ -245,6 +276,7 @@ Expected final result includes:
 ```text
 ✅ All integrity checks passed.
 Release manifest generated.
+✅ Release manifest check passed.
 ```
 
 ## What is treated as canonical?
