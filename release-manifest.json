@@ -11938,8 +11938,8 @@
     },
     {
       "path": "package.json",
-      "bytes": 1587,
-      "sha256": "e5fb945b4bb213de64d5188e27fc030dcd77f5134b3b8f90b2846c89da1c0c66"
+      "bytes": 1748,
+      "sha256": "030d0fa11a539ed496ae154c5af61ee6b27f7e6570e7868846f1a961c477d934"
     },
     {
       "path": "README.md",
@@ -11955,6 +11955,11 @@
       "path": "scripts/build-data.js",
       "bytes": 2573,
       "sha256": "c1e24472be5f8c9ed7efdce5c30d0b3186f9063b091ab688a3c67d150736e903"
+    },
+    {
+      "path": "scripts/build-publish-folder.js",
+      "bytes": 2982,
+      "sha256": "4ed9a37263b260d53fd155be30ca38fff9a6b60053467f31335a79904c157ffb"
     },
     {
       "path": "scripts/build-release-bundle.js",

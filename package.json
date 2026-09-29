@@ -20,6 +20,8 @@
     "build:sample": "node scripts/build-data.js source/john-sample.json",
     "build:release": "node scripts/build-release-manifest.js",
     "build:bundle": "npm run verify && node scripts/build-release-bundle.js && npm run check:bundle",
+    "build:site": "npm run verify && node scripts/build-publish-folder.js",
+    "build:publish": "npm run build:bundle && node scripts/build-publish-folder.js",
     "check:data": "node scripts/check-data.js",
     "check:release": "node scripts/check-release-manifest.js",
     "check:bundle": "node scripts/check-release-bundle.js",
