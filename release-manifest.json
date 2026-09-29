@@ -28,8 +28,8 @@
     },
     {
       "path": "ARCHITECTURE.md",
-      "bytes": 11469,
-      "sha256": "da84986b292819d5809c3017c514b3f17360b10d57413c0c763beac91c1e3dec"
+      "bytes": 4260,
+      "sha256": "bff9a90fdd2fc064827cab5c28f325977df3e5eab2ea1bbf54af15b9e0cc93f2"
     },
     {
       "path": "data/1-chronicles-1.json",
@@ -11943,13 +11943,13 @@
     },
     {
       "path": "README.md",
-      "bytes": 8586,
-      "sha256": "f7caef40f37699642673ee46b22b62cf050f3ab15774d5a152441cb0f1475ef8"
+      "bytes": 3014,
+      "sha256": "ab2a5067932e9312ae9d8aed725ee0652314db40702cda857222f2a393f31134"
     },
     {
       "path": "release.md",
-      "bytes": 289,
-      "sha256": "5f4997d3ee9ff1c285f2e0f903dcd57ef72cce45323c854e723081996f60e8ab"
+      "bytes": 2852,
+      "sha256": "5d42a4c22adf0a3efbc70ceb990654394c429ca5b0fca236d8c1907e7352f82c"
     },
     {
       "path": "scripts/build-data.js",
@@ -12018,8 +12018,8 @@
     },
     {
       "path": "source.md",
-      "bytes": 5852,
-      "sha256": "42b84dc6279f27d4d3529c8c3d9be6ece22093e17c1deedf313e58b771280d01"
+      "bytes": 3103,
+      "sha256": "2cdcd2d43b2f6d3956a35143e29d008447087d5fe3581d74a7958694cd2a2f68"
     },
     {
       "path": "source/full-bible-gutenberg.json",
