@@ -141,6 +141,53 @@ async function loadTextFile(path) {
   return response.text();
 }
 
+function setControlsDisabled(disabled) {
+  [
+    prevButton,
+    nextButton,
+    mobilePrevButton,
+    mobileNextButton,
+    bookSelect,
+    chapterSelect
+  ].forEach((element) => {
+    if (element) {
+      element.disabled = disabled;
+    }
+  });
+}
+
+function renderLoadingState(message) {
+  document.title = "Loading | Permanent Word";
+
+  bookLabel.textContent = "LOADING";
+  chapterTitle.textContent = "Loading verified Bible bundle";
+  chapterTitle.hidden = false;
+
+  scriptureText.innerHTML = `
+    <p class="verse">
+      Loading Permanent Word. This may take a few seconds on decentralized gateways.
+    </p>
+  `;
+
+  verifyStatus.textContent = "Checking text...";
+  verifyStatus.className = "verify-pill is-warning";
+
+  verificationMessage.textContent = message;
+  currentHashEl.textContent = "Checking...";
+  canonicalHashEl.textContent = "Checking...";
+
+  sourceTranslation.textContent = "—";
+  sourceProvider.textContent = "—";
+  sourceImportedBook.textContent = "—";
+  sourceFile.textContent = "—";
+  sourceChapterCount.textContent = "—";
+
+  bookSelect.innerHTML = `<option>Loading...</option>`;
+  chapterSelect.innerHTML = `<option>Loading...</option>`;
+
+  setControlsDisabled(true);
+}
+
 async function loadManifest() {
   rawManifest = await loadTextFile(MANIFEST_PATH);
   manifest = JSON.parse(rawManifest);
@@ -457,12 +504,24 @@ async function goToChapterIndex(index, shouldUpdateUrl = true) {
 
 async function init() {
   try {
+    renderLoadingState(
+      "Loading and verifying the manifest, chapter data, and compact Bible bundle."
+    );
+
     await loadManifest();
+
+    renderLoadingState("Verifying the chapter manifest...");
     await verifyManifest();
+
+    renderLoadingState("Loading and verifying the compact Bible bundle...");
     await loadBibleBundleIfNeeded();
+
     populateBookSelect();
     setInitialChapterFromUrl();
     renderSourceInfo();
+
+    setControlsDisabled(false);
+
     await renderCurrentChapter();
   } catch (error) {
     verifyStatus.textContent = "Could not load text";
@@ -471,6 +530,7 @@ async function init() {
       "The manifest, manifest hash, chapter file, or compact Bible bundle could not be loaded. Confirm the data files exist.";
     currentHashEl.textContent = "Unavailable";
     canonicalHashEl.textContent = "Unavailable";
+    setControlsDisabled(false);
   }
 }
 
