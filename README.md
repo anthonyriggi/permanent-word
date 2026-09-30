@@ -9,24 +9,31 @@ No runtime dependencies.
 
 ## Live deployments
 
-### GitHub Pages
+### Main site
+
+```text
+https://permanentword.org/
+```
+
+### GitHub Pages source deployment
 
 ```text
 https://anthonyriggi.github.io/permanent-word/
-```
-
-### IPFS / Pinata
-
-```text
-IPFS CID: bafybeifj6dfs6vjjj2xbl6pf2rc2e7e2o5dutukqtmy5kkgmgxghm7op6a
-IPFS URL: TODO: Pending custom gateway/domain
 ```
 
 ### Arweave / ArDrive
 
 ```text
 Arweave Manifest/Data TX ID: Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI
-Arweave URL: https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/
+Arweave URL: https://arweave.permanentword.org/
+ArDrive/Turbo URL: https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/
+```
+
+### IPFS / Pinata
+
+```text
+IPFS CID: bafybeifj6dfs6vjjj2xbl6pf2rc2e7e2o5dutukqtmy5kkgmgxghm7op6a
+IPFS URL: Pending custom gateway/domain
 ```
 
 ## Current status
@@ -44,6 +51,22 @@ Arweave URL: https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-
 
 ## Example URLs
 
+### Main site
+
+```text
+https://permanentword.org/#genesis-1
+https://permanentword.org/#psalms-23
+https://permanentword.org/#john-3
+https://permanentword.org/#1-corinthians-5
+https://permanentword.org/#revelation-21
+```
+
+### Arweave
+
+```text
+https://arweave.permanentword.org/
+```
+
 ### GitHub Pages
 
 ```text
@@ -52,16 +75,6 @@ https://anthonyriggi.github.io/permanent-word/#psalms-23
 https://anthonyriggi.github.io/permanent-word/#john-3
 https://anthonyriggi.github.io/permanent-word/#1-corinthians-5
 https://anthonyriggi.github.io/permanent-word/#revelation-21
-```
-
-### Arweave
-
-```text
-https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/#genesis-1
-https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/#psalms-23
-https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/#john-3
-https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/#1-corinthians-5
-https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/#revelation-21
 ```
 
 ## Normal data flow
