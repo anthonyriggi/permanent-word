@@ -8,10 +8,26 @@ Permanent Word is a static, verifiable KJV Bible reader.
 v0.1.1
 ```
 
-## Live deployment
+## Live deployments
+
+### GitHub Pages
 
 ```text
 https://anthonyriggi.github.io/permanent-word/
+```
+
+### IPFS / Pinata
+
+```text
+IPFS CID: TODO: ADD_NEW_PINATA_CID_HERE
+IPFS URL: TODO: ADD_NEW_PINATA_GATEWAY_URL_HERE
+```
+
+### Arweave / ArDrive
+
+```text
+Arweave Manifest/Data TX ID: Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI
+Arweave URL: https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/
 ```
 
 ## Release scope
@@ -130,47 +146,6 @@ Check release manifest:
 ```bash
 npm run check:release
 ```
-
-## GitHub Pages
-
-```text
-https://anthonyriggi.github.io/permanent-word/
-```
-
-## IPFS status
-
-Upload folder:
-
-```text
-dist/permanent-word-v0.1.1-site/
-```
-
-Record after upload:
-
-```text
-IPFS CID:
-IPFS gateway URL:
-Upload provider:
-```
-
-Pinata may require a dedicated gateway or custom domain for reliable public HTML serving.
-
-## Arweave status
-
-Upload folder:
-
-```text
-dist/permanent-word-v0.1.1-site/
-```
-
-Record after upload:
-
-```text
-Arweave manifest/Data TX ID:
-Arweave website URL:
-```
-
-Arweave gateways may redirect the site to a sandboxed subdomain.
 
 ## Useful deployed checks
 

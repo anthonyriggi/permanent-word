@@ -7,10 +7,26 @@ No backend.
 No database.  
 No runtime dependencies.
 
-## Live site
+## Live deployments
+
+### GitHub Pages
 
 ```text
 https://anthonyriggi.github.io/permanent-word/
+```
+
+### IPFS / Pinata
+
+```text
+IPFS CID: ADD_NEW_PINATA_CID_HERE
+IPFS URL: ADD_NEW_PINATA_GATEWAY_URL_HERE
+```
+
+### Arweave / ArDrive
+
+```text
+Arweave Manifest/Data TX ID: Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI
+Arweave URL: https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/
 ```
 
 ## Current status
@@ -28,12 +44,24 @@ https://anthonyriggi.github.io/permanent-word/
 
 ## Example URLs
 
+### GitHub Pages
+
 ```text
 https://anthonyriggi.github.io/permanent-word/#genesis-1
 https://anthonyriggi.github.io/permanent-word/#psalms-23
 https://anthonyriggi.github.io/permanent-word/#john-3
 https://anthonyriggi.github.io/permanent-word/#1-corinthians-5
 https://anthonyriggi.github.io/permanent-word/#revelation-21
+```
+
+### Arweave
+
+```text
+https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/#genesis-1
+https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/#psalms-23
+https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/#john-3
+https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/#1-corinthians-5
+https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/#revelation-21
 ```
 
 ## Normal data flow
