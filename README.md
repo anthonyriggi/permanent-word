@@ -18,8 +18,8 @@ https://anthonyriggi.github.io/permanent-word/
 ### IPFS / Pinata
 
 ```text
-IPFS CID: ADD_NEW_PINATA_CID_HERE
-IPFS URL: ADD_NEW_PINATA_GATEWAY_URL_HERE
+IPFS CID: bafybeifj6dfs6vjjj2xbl6pf2rc2e7e2o5dutukqtmy5kkgmgxghm7op6a
+IPFS URL: TODO: Pending custom gateway/domain
 ```
 
 ### Arweave / ArDrive
