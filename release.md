@@ -5,7 +5,7 @@ Permanent Word is a static, verifiable KJV Bible reader.
 ## Release version
 
 ```text
-v0.1.1
+v0.1.2
 ```
 
 ## Live deployments
@@ -74,7 +74,7 @@ source/full-bible-gutenberg.sha256.txt
 data/manifest.sha256.txt
 data/*.sha256.txt
 release-manifest.sha256.txt
-dist/permanent-word-v0.1.1.zip.sha256.txt
+dist/permanent-word-v0.1.2.zip.sha256.txt
 ```
 
 Full verification:
@@ -99,16 +99,16 @@ npm run build:publish
 Generated artifacts:
 
 ```text
-dist/permanent-word-v0.1.1.zip
-dist/permanent-word-v0.1.1.zip.sha256.txt
-dist/permanent-word-v0.1.1-site/
+dist/permanent-word-v0.1.2.zip
+dist/permanent-word-v0.1.2.zip.sha256.txt
+dist/permanent-word-v0.1.2-site/
 ```
 
 ## Archive bundle
 
 ```text
-dist/permanent-word-v0.1.1.zip
-dist/permanent-word-v0.1.1.zip.sha256.txt
+dist/permanent-word-v0.1.2.zip
+dist/permanent-word-v0.1.2.zip.sha256.txt
 ```
 
 Check:
@@ -120,7 +120,7 @@ npm run check:bundle
 ## Compact publish folder
 
 ```text
-dist/permanent-word-v0.1.1-site/
+dist/permanent-word-v0.1.2-site/
 ```
 
 This folder is intended for IPFS and Arweave uploads.

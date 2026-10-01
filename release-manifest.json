@@ -32,6 +32,11 @@
       "sha256": "bff9a90fdd2fc064827cab5c28f325977df3e5eab2ea1bbf54af15b9e0cc93f2"
     },
     {
+      "path": "CNAME",
+      "bytes": 17,
+      "sha256": "a36e32ddf2c49aee66fa92e93783129e287987250aa183bff32857524eb08167"
+    },
+    {
       "path": "data/1-chronicles-1.json",
       "bytes": 6597,
       "sha256": "b3cdeeba62b2474a55ad04bad1b228466f53605df8d355016398b033b098822c"
@@ -11933,23 +11938,23 @@
     },
     {
       "path": "index.html",
-      "bytes": 4352,
-      "sha256": "b4748498dea46762af8e7e00a4343ea3c8ee856f8ed6a98572e84b608b8ebd82"
+      "bytes": 4344,
+      "sha256": "855e67ceea2c46ab0fb893dec34bd6f1dbb940b7a36b8be9e64646abc011b38a"
     },
     {
       "path": "package.json",
-      "bytes": 1748,
-      "sha256": "cb9f85c9b692546ee9c361f026be824d2b80a8f7fd3050b579e1afd7dca39ae9"
+      "bytes": 1749,
+      "sha256": "86c3f58b0cb3aabb5266e160b99c6fbb524638fa731f95bae82ee782a6ab2b3f"
     },
     {
       "path": "README.md",
-      "bytes": 3014,
-      "sha256": "ab2a5067932e9312ae9d8aed725ee0652314db40702cda857222f2a393f31134"
+      "bytes": 3853,
+      "sha256": "332aa35f0e15e35839ed8c489dab2d68aca3ad23f416b368a2b75cf02c8c68f5"
     },
     {
       "path": "release.md",
-      "bytes": 2852,
-      "sha256": "5d42a4c22adf0a3efbc70ceb990654394c429ca5b0fca236d8c1907e7352f82c"
+      "bytes": 3092,
+      "sha256": "77103bd282d7b64b970cbeaaa0694af9f86944006851d18bfd1f0ad7d2c6cc17"
     },
     {
       "path": "scripts/build-data.js",
