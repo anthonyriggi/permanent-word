@@ -25,9 +25,9 @@ https://anthonyriggi.github.io/permanent-word/
 ### Arweave / ArDrive
 
 ```text
-Arweave Manifest/Data TX ID: Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI
+Arweave Manifest/Data TX ID: wF9cU_CA33N0-UXoiDfnc6DvUy-W2S5nZMNJWlTbqn8
 Arweave URL: https://arweave.permanentword.org/
-ArDrive/Turbo URL: https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/Vqe4gs1mpfPMydBXp4b8kgvj1heyrQuaqcL2pch1DbI/
+ArDrive/Turbo URL: https://k2t3rawnm2s7htgj2bl2pbx4sif6hvqxwkwqxgvjyl3klsdvbwza.turbo-gateway.com/wF9cU_CA33N0-UXoiDfnc6DvUy-W2S5nZMNJWlTbqn8/
 ```
 
 ### IPFS / Pinata
@@ -62,6 +62,7 @@ Clean compact-bundle loading state
 Custom domain for main GitHub Pages deployment
 Arweave redirect domain
 IPFS CID recorded
+Corrected full Bible wording
 ```
 
 ## Verification
